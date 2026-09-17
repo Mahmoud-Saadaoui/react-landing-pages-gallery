@@ -22,8 +22,10 @@ const LanguageSwitcher = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const activeCode = i18n.resolvedLanguage?.slice(0, 2) ?? "en";
+
   const current =
-    LANGUAGES.find((lang) => lang.code === i18n.language) ?? LANGUAGES[0];
+    LANGUAGES.find((lng) => lng.code === activeCode) ?? LANGUAGES[0];
 
   const changeLanguage = (code) => {
     i18n.changeLanguage(code);
@@ -46,20 +48,20 @@ const LanguageSwitcher = () => {
           className="absolute top-full mt-1 start-0 w-full rounded border border-gray-200 bg-white shadow-lg"
           role="listbox"
         >
-          {LANGUAGES.map((lang) => (
-            <li key={lang.code}>
+          {LANGUAGES.map((lng) => (
+            <li key={lng.code}>
               <button
                 type="button"
-                onClick={() => changeLanguage(lang.code)}
+                onClick={() => changeLanguage(lng.code)}
                 className={`w-full px-3 py-2 text-start text-sm hover:bg-gray-50 ${
-                  lang.code === i18n.language
+                  lng.code === activeCode
                     ? "text-blue-600 font-semibold"
                     : "text-gray-700"
                 }`}
                 role="option"
-                aria-selected={lang.code === i18n.language}
+                aria-selected={lng.code === activeCode}
               >
-                {lang.label}
+                {lng.label}
               </button>
             </li>
           ))}

@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "React Starter"
+    "name": "Collection de Landing Pages"
   },
   "nav": {
     "home": "Accueil"
@@ -26,7 +26,7 @@
     "dashboard": "Tableau de bord"
   },
   "footer": {
-    "copyright": "© {{year}} React Starter Kit",
+    "copyright": "© {{year}} React Landing Pages Gallery",
     "slogan": "Multilingue • RTL-ready • Réutilisable"
   },
   "common": {

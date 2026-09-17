@@ -6,21 +6,34 @@ import landingPages, { CATEGORIES } from "../config/landingPages";
 const initial = (title) => title.trim().charAt(0).toUpperCase();
 
 const CardImage = ({ page }) => {
-  if (page.screenshot) {
+  const [loaded, setLoaded] = useState(false);
+
+  if (!page.screenshot) {
     return (
+      <div className="flex h-44 w-full items-center justify-center bg-[#0F172A]">
+        <span className="font-display text-5xl font-bold text-white/15">
+          {initial(page.title)}
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative h-44 w-full">
+      <div
+        className={`absolute inset-0 animate-pulse bg-gray-200 transition-opacity duration-300 ${
+          loaded ? "opacity-0" : "opacity-100"
+        }`}
+      />
       <img
         src={page.screenshot}
         alt={page.title}
-        className="h-44 w-full object-cover object-top"
+        className={`h-44 w-full object-cover object-top transition-opacity duration-300 ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
         loading="lazy"
+        onLoad={() => setLoaded(true)}
       />
-    );
-  }
-  return (
-    <div className="flex h-44 w-full items-center justify-center bg-[#0F172A]">
-      <span className="font-display text-5xl font-bold text-white/15">
-        {initial(page.title)}
-      </span>
     </div>
   );
 };
@@ -80,22 +93,11 @@ const HomePage = () => {
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-      <header className="mb-10">
-        <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-[#E8590C]">
-          {t("gallery.eyebrow")}
-        </p>
-        <div className="flex flex-wrap items-end justify-between gap-6">
-          <h1 className="max-w-2xl font-display text-4xl font-bold leading-tight text-[#0F172A] sm:text-5xl">
-            {t("gallery.title")}
-          </h1>
-          <p className="inline-flex items-center gap-2 rounded-lg border border-[#0F172A]/10 bg-white px-3 py-1.5 font-mono text-sm font-semibold text-[#0F172A]">
-            {landingPages.length}
-            <span className="font-normal text-[#5B6B80]">
-              {t("gallery.count", { count: landingPages.length })}
-            </span>
-          </p>
-        </div>
-        <p className="mt-4 max-w-2xl leading-relaxed text-[#5B6B80]">
+      <header className="mb-10 text-center">
+        <h1 className="mx-auto max-w-3xl font-display text-4xl font-bold leading-tight text-[#0F172A] sm:text-5xl">
+          {t("gallery.title")}
+        </h1>
+        <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-[#5B6B80]">
           {t("gallery.sub")}
         </p>
       </header>

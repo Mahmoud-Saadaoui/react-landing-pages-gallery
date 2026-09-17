@@ -3,7 +3,7 @@ import { sidebarNav } from "./data";
 
 const Sidebar = () => (
   <div className="sidebar bg-white p-20 p-relative">
-    <h3 className="p-relative txt-c mt-0">Elzero</h3>
+    <h3 className="p-relative txt-c mt-0">Mahmoud</h3>
     <ul>
       {sidebarNav.map((item) => (
         <li key={item.label}>

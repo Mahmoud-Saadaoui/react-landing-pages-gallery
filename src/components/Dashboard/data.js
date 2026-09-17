@@ -14,11 +14,11 @@ export const sidebarNav = [
 export const homeData = {
   welcome: {
     title: "Welcome",
-    subtitle: "Elzero",
+    subtitle: "Mahmoud",
     introImg: images.welcomePng,
     avatar: images.avatar,
     stats: [
-      { label: "Osama Elzero", sub: "Developer" },
+      { label: "Mahmoud", sub: "Developer" },
       { label: "80", sub: "Projects" },
       { label: "$8500", sub: "Earned" },
     ],
@@ -56,7 +56,7 @@ export const homeData = {
     { keyword: "Logic", count: 95 },
   ],
   uploads: [
-    { img: images.pdfSvg, name: "my-file.pdf", author: "Elzero", size: "2.9mb" },
+    { img: images.pdfSvg, name: "my-file.pdf", author: "Mahmoud", size: "2.9mb" },
     { img: images.aviSvg, name: "My-Video-File.avi", author: "Admin", size: "4.9mb" },
     { img: images.psdSvg, name: "My-Psd-File.pdf", author: "Osama", size: "4.5mb" },
     { img: images.zipSvg, name: "My-Zip-File.pdf", author: "User", size: "8.9mb" },
@@ -77,7 +77,7 @@ export const homeData = {
     { color: "red", title: "Finish The Development Workshop", date: "20/12/2022 - 12:00am" },
   ],
   post: {
-    name: "Osama Elzero",
+    name: "Mahmoud Saadaoui",
     time: "About 3 Hours Ago",
     content:
       "You can fool all of the people some of the time, and some of the people all of the time, but you can't fool all of the people all of the time.",
@@ -92,7 +92,7 @@ export const homeData = {
   ],
   projectsTable: [
     { name: "Ministry Wikipedia", date: "10 May 2022", client: "Ministry", price: "$5300", team: [images.team01, images.team02, images.team03, images.team05], status: "Pending", statusClass: "bg-orange" },
-    { name: "Elzero Shop", date: "12 Oct 2021", client: "Elzero Company", price: "$1500", team: [images.team01, images.team02, images.team05], status: "In Progress", statusClass: "bg-blue" },
+    { name: "Mahmoud Shop", date: "12 Oct 2021", client: "Mahmoud Company", price: "$1500", team: [images.team01, images.team02, images.team05], status: "In Progress", statusClass: "bg-blue" },
     { name: "Bouba App", date: "05 Sep 2021", client: "Bouba", price: "$800", team: [images.team02, images.team03], status: "Completed", statusClass: "bg-green" },
     { name: "Mahmoud Website", date: "22 May 2021", client: "Mahmoud", price: "$600", team: [images.team01, images.team02], status: "Completed", statusClass: "bg-green" },
     { name: "Sayed Website", date: "24 May 2021", client: "Sayed", price: "$300", team: [images.team01, images.team03], status: "Rejected", statusClass: "bg-red" },
@@ -101,7 +101,7 @@ export const homeData = {
 };
 
 export const profileData = {
-  name: "Osama Elzero",
+  name: "Mahmoud Saadaoui",
   level: "Level 20",
   levelWidth: "70%",
   rating: [1, 2, 3, 4, 5],
@@ -162,7 +162,7 @@ export const profileData = {
 };
 
 export const projectsData = [
-  { date: "15/10/2021", name: "Elzero Dashboard", desc: "Elzero Dashboard Project Design And Programming And Hosting", team: [images.team01, images.team02, images.team03, images.team04, images.team05], do: ["Programming", "Design", "Hosting", "Marketing"], progClass: "bg-red", width: "50%", price: "2500" },
+  { date: "15/10/2021", name: "Mahmoud Dashboard", desc: "Mahmoud Dashboard Project Design And Programming And Hosting", team: [images.team01, images.team02, images.team03, images.team04, images.team05], do: ["Programming", "Design", "Hosting", "Marketing"], progClass: "bg-red", width: "50%", price: "2500" },
   { date: "15/6/2022", name: "Academy Portal", desc: "Academy Portal Project Design And Programming", team: [images.team01, images.team02, images.team03], do: ["Programming", "Design"], progClass: "bg-green", width: "80%", price: "1800" },
   { date: "15/6/2022", name: "Chatting Application", desc: "Chatting Application Project Design", team: [images.team01, images.team02, images.team03], do: ["Design"], progClass: "bg-blue", width: "100%", price: "950" },
   { date: "15/6/2022", name: "Ahmed Dashboard", desc: "Ahmed Dashboard Project Design And Programming And Hosting", team: [images.team01, images.team02, images.team03, images.team04], do: ["Programming", "Design", "Hosting", "Marketing"], progClass: "bg-green", width: "60%", price: "1700" },
@@ -218,28 +218,28 @@ export const filesData = {
     { icon: "fa-solid fa-file-csv", color: "orange", name: "CSV Files", count: "99 Files", size: "2.9GB" },
   ],
   files: [
-    [images.pdfSvg, "my-file.pdf", "Elzero", "20/06/2020", "5.5MB"],
+    [images.pdfSvg, "my-file.pdf", "Mahmoud", "20/06/2020", "5.5MB"],
     [images.aviSvg, "my-file.avi", "Admin", "16/5/2021", "12.5MB"],
     [images.epsSvg, "my-file.eps", "Uploader", "16/5/2021", "2.7MB"],
-    [images.psdSvg, "my-file.psd", "Osama", "16/5/2021", "15.1MB"],
+    [images.psdSvg, "my-file.psd", "Forkan", "16/5/2021", "15.1MB"],
     [images.dllSvg, "my-file.dll", "Coder", "16/5/2021", "2.2MB"],
     [images.pngSvg, "my-file.png", "Designer", "16/5/2021", "1.1MB"],
     [images.dllSvg, "my-file.dll", "Coder", "16/5/2021", "2.2MB"],
     [images.pngSvg, "my-file.png", "Designer", "16/5/2021", "1.1MB"],
-    [images.psdSvg, "my-file.psd", "Osama", "16/5/2021", "15.1MB"],
-    [images.pdfSvg, "my-file.pdf", "Elzero", "16/5/2021", "5.5MB"],
+    [images.psdSvg, "my-file.psd", "Farouk", "16/5/2021", "15.1MB"],
+    [images.pdfSvg, "my-file.pdf", "Mahmoud", "16/5/2021", "5.5MB"],
     [images.aviSvg, "my-file.avi", "Admin", "16/5/2021", "12.5MB"],
     [images.epsSvg, "my-file.eps", "Uploader", "16/5/2021", "2.7MB"],
-    [images.pdfSvg, "my-file.pdf", "Elzero", "16/5/2021", "5.5MB"],
+    [images.pdfSvg, "my-file.pdf", "Mahmoud", "16/5/2021", "5.5MB"],
     [images.aviSvg, "my-file.avi", "Admin", "16/5/2021", "12.5MB"],
     [images.epsSvg, "my-file.eps", "Uploader", "16/5/2021", "2.7MB"],
-    [images.psdSvg, "my-file.psd", "Osama", "16/5/2021", "15.1MB"],
+    [images.psdSvg, "my-file.psd", "Fadi", "16/5/2021", "15.1MB"],
     [images.dllSvg, "my-file.dll", "Coder", "16/5/2021", "2.2MB"],
     [images.pngSvg, "my-file.png", "Designer", "16/5/2021", "1.1MB"],
     [images.dllSvg, "my-file.dll", "Coder", "16/5/2021", "2.2MB"],
     [images.pngSvg, "my-file.png", "Designer", "16/5/2021", "1.1MB"],
     [images.psdSvg, "my-file.psd", "Osama", "16/5/2021", "15.1MB"],
-    [images.pdfSvg, "my-file.pdf", "Elzero", "16/5/2021", "5.5MB"],
+    [images.pdfSvg, "my-file.pdf", "Mahmoud", "16/5/2021", "5.5MB"],
     [images.aviSvg, "my-file.avi", "Admin", "16/5/2021", "12.5MB"],
     [images.epsSvg, "my-file.eps", "Uploader", "16/5/2021", "2.7MB"],
   ],
