@@ -1,0 +1,125 @@
+.special-design-page {
+  line-height: 1.15; 
+  -webkit-text-size-adjust: 100%; 
+}
+.special-design-page {
+  margin: 0;
+}
+.special-design-page main {
+  display: block;
+}
+.special-design-page h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+.special-design-page hr {
+  box-sizing: content-box; 
+  height: 0; 
+  overflow: visible; 
+}
+.special-design-page pre {
+  font-family: monospace, monospace; 
+  font-size: 1em; 
+}
+.special-design-page a {
+  background-color: transparent;
+}
+.special-design-page abbr[title] {
+  border-bottom: none; 
+  text-decoration: underline; 
+  text-decoration: underline dotted; 
+}
+.special-design-page b, .special-design-page strong {
+  font-weight: bolder;
+}
+.special-design-page code, .special-design-page kbd, .special-design-page samp {
+  font-family: monospace, monospace; 
+  font-size: 1em; 
+}
+.special-design-page small {
+  font-size: 80%;
+}
+.special-design-page sub, .special-design-page sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.special-design-page sub {
+  bottom: -0.25em;
+}
+.special-design-page sup {
+  top: -0.5em;
+}
+.special-design-page img {
+  border-style: none;
+}
+.special-design-page button, .special-design-page input, .special-design-page optgroup, .special-design-page select, .special-design-page textarea {
+  font-family: inherit; 
+  font-size: 100%; 
+  line-height: 1.15; 
+  margin: 0; 
+}
+.special-design-page button, .special-design-page input { 
+  overflow: visible;
+}
+.special-design-page button, .special-design-page select { 
+  text-transform: none;
+}
+.special-design-page button, .special-design-page [type="button"], .special-design-page [type="reset"], .special-design-page [type="submit"] {
+  -webkit-appearance: button;
+}
+.special-design-page button::-moz-focus-inner, .special-design-page [type="button"]::-moz-focus-inner, .special-design-page [type="reset"]::-moz-focus-inner, .special-design-page [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+.special-design-page button:-moz-focusring, .special-design-page [type="button"]:-moz-focusring, .special-design-page [type="reset"]:-moz-focusring, .special-design-page [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+.special-design-page fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+.special-design-page legend {
+  box-sizing: border-box; 
+  color: inherit; 
+  display: table; 
+  max-width: 100%; 
+  padding: 0; 
+  white-space: normal; 
+}
+.special-design-page progress {
+  vertical-align: baseline;
+}
+.special-design-page textarea {
+  overflow: auto;
+}
+.special-design-page [type="checkbox"], .special-design-page [type="radio"] {
+  box-sizing: border-box; 
+  padding: 0; 
+}
+.special-design-page [type="number"]::-webkit-inner-spin-button, .special-design-page [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+.special-design-page [type="search"] {
+  -webkit-appearance: textfield; 
+  outline-offset: -2px; 
+}
+.special-design-page [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.special-design-page ::-webkit-file-upload-button {
+  -webkit-appearance: button; 
+  font: inherit; 
+}
+.special-design-page details {
+  display: block;
+}
+.special-design-page summary {
+  display: list-item;
+}
+.special-design-page template {
+  display: none;
+}
+.special-design-page [hidden] {
+  display: none;
+}

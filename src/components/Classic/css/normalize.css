@@ -1,0 +1,145 @@
+.classic-page {
+  font-family: sans-serif; 
+  -ms-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%; 
+}
+.classic-page {
+  margin: 0;
+}
+.classic-page article, .classic-page aside, .classic-page details, .classic-page figcaption, .classic-page figure, .classic-page footer, .classic-page header, .classic-page hgroup, .classic-page main, .classic-page menu, .classic-page nav, .classic-page section, .classic-page summary {
+  display: block;
+}
+.classic-page audio, .classic-page canvas, .classic-page progress, .classic-page video {
+  display: inline-block; 
+  vertical-align: baseline; 
+}
+.classic-page audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+.classic-page [hidden], .classic-page template {
+  display: none;
+}
+.classic-page a {
+  background-color: transparent;
+}
+.classic-page a:active, .classic-page a:hover {
+  outline: 0;
+}
+.classic-page abbr[title] {
+  border-bottom: 1px dotted;
+}
+.classic-page b, .classic-page strong {
+  font-weight: bold;
+}
+.classic-page dfn {
+  font-style: italic;
+}
+.classic-page h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+.classic-page mark {
+  background: #ff0;
+  color: #000;
+}
+.classic-page small {
+  font-size: 80%;
+}
+.classic-page sub, .classic-page sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.classic-page sup {
+  top: -0.5em;
+}
+.classic-page sub {
+  bottom: -0.25em;
+}
+.classic-page img {
+  border: 0;
+}
+.classic-page svg:not(:root) {
+  overflow: hidden;
+}
+.classic-page figure {
+  margin: 1em 40px;
+}
+.classic-page hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+.classic-page pre {
+  overflow: auto;
+}
+.classic-page code, .classic-page kbd, .classic-page pre, .classic-page samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+.classic-page button, .classic-page input, .classic-page optgroup, .classic-page select, .classic-page textarea {
+  color: inherit; 
+  font: inherit; 
+  margin: 0; 
+}
+.classic-page button {
+  overflow: visible;
+}
+.classic-page button, .classic-page select {
+  text-transform: none;
+}
+.classic-page button, .classic-page html input[type="button"], .classic-page input[type="reset"], .classic-page input[type="submit"] {
+  -webkit-appearance: button; 
+  cursor: pointer; 
+}
+.classic-page button[disabled], .classic-page html input[disabled] {
+  cursor: default;
+}
+.classic-page button::-moz-focus-inner, .classic-page input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.classic-page input {
+  line-height: normal;
+}
+.classic-page input[type="checkbox"], .classic-page input[type="radio"] {
+  box-sizing: border-box; 
+  padding: 0; 
+}
+.classic-page input[type="number"]::-webkit-inner-spin-button, .classic-page input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+.classic-page input[type="search"] {
+  -webkit-appearance: textfield; 
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; 
+  box-sizing: content-box;
+}
+.classic-page input[type="search"]::-webkit-search-cancel-button, .classic-page input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+.classic-page fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+.classic-page legend {
+  border: 0; 
+  padding: 0; 
+}
+.classic-page textarea {
+  overflow: auto;
+}
+.classic-page optgroup {
+  font-weight: bold;
+}
+.classic-page table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.classic-page td, .classic-page th {
+  padding: 0;
+}
+

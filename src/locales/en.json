@@ -1,0 +1,46 @@
+{
+  "brand": {
+    "name": "React Starter"
+  },
+  "nav": {
+    "home": "Home"
+  },
+  "gallery": {
+    "back": "Back to gallery",
+    "eyebrow": "Landing Pages Collection",
+    "title": "A set of maquettes, brought together inside one React app.",
+    "sub": "Each template was converted from vanilla HTML/CSS/JS, jQuery and Bootstrap into a modern React component — reachable through its own route.",
+    "count": "landing pages",
+    "all": "All",
+    "route": "route",
+    "open": "Open",
+    "pending": "In progress",
+    "pendingMessage": "This landing page is being converted to React. It will be available here shortly."
+  },
+  "categories": {
+    "ecommerce": "E-Commerce",
+    "corporate": "Corporate",
+    "portfolio": "Portfolio",
+    "app-saas": "App / SaaS",
+    "creative": "Creative",
+    "dashboard": "Dashboard"
+  },
+  "footer": {
+    "copyright": "© {{year}} React Starter Kit",
+    "slogan": "Multilingual • RTL-ready • Reusable"
+  },
+  "common": {
+    "goHome": "Go to Home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "message": "An unexpected error occurred. Please try again.",
+    "goHome": "Return to Home",
+    "refresh": "Refresh Page"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "The page you are looking for does not exist or has been moved.",
+    "goHome": "Return to Home"
+  }
+}

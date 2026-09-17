@@ -1,0 +1,254 @@
+@font-face {
+  font-family: ar-font;
+  src: url(../fonts/Cairo-SemiBold.ttf);
+}
+.coming-soon-page {
+  direction: rtl;
+  font-family: ar-font;
+}
+.coming-soon-page header {
+  background-image: url(../images/header-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.coming-soon-page header .brand {
+  width: auto;
+  display: inline-block;
+  padding: 20px 10px;
+  margin: 50px auto;
+  border-bottom: 5px solid #454545;
+}
+.coming-soon-page header .page-heading h1 {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 75px;
+  color: #fff;
+}
+.coming-soon-page header .page-heading p {
+  width: 40%;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 25px;
+  color: #acacac;
+}
+.coming-soon-page header .counter {
+  width: 60%;
+  margin: 60px auto;
+  padding: 30px;
+}
+.coming-soon-page header .counter .is-countdown .countdown-section {
+  display: inline-block;
+  margin: 0 20px;
+}
+.coming-soon-page header .counter .is-countdown .countdown-section .countdown-amount {
+  display: block;
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffce00;
+}
+.coming-soon-page header .counter .is-countdown .countdown-section .countdown-period {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.coming-soon-page header .send-notification p {
+  font-size: 18px;
+  color: #fff;
+}
+.coming-soon-page header .send-notification .input-group {
+  width: 30%;
+  margin: 0 auto;
+  -webkit-transform: translateY(30%);
+  -ms-transform: translateY(30%);
+  transform: translateY(30%);
+}
+.coming-soon-page header .send-notification .input-group input {
+  border-radius: 0;
+  font-size: 18px;
+  font-family: ar-font;
+  color: #e6e6e6;
+  border-width: 2px;
+  border-color: #e6e6e6;
+  height: auto;
+}
+.coming-soon-page header .send-notification .input-group input:hover, .coming-soon-page header .send-notification .input-group input:focus {
+  box-shadow: 0 0 0;
+  border-color: #e6e6e6;
+}
+.coming-soon-page header .send-notification .input-group button {
+  border-radius: 0;
+  background-color: #ffce00;
+  padding: .5rem 1.5rem;
+}
+.coming-soon-page header .send-notification .input-group button:hover, .coming-soon-page header .send-notification .input-group button:focus {
+  box-shadow: 0 0 0;
+  border-color: transparent;
+}
+.coming-soon-page header .send-notification .input-group .alert {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: 0;
+}
+.coming-soon-page section.features {
+  padding: 100px 0;
+  position: relative;
+  text-align: right;
+}
+.coming-soon-page section.features h2 {
+  margin-bottom: 50px;
+  font-size: 45px;
+  color: #555;
+}
+.coming-soon-page section.features .media {
+  border: 4px solid #fafafa;
+  padding: 40px 10px;
+  margin-bottom: 20px;
+  position: relative;
+  max-height: 190px;
+}
+.coming-soon-page section.features .media .media-body h5 {
+  font-size: 24px;
+  color: #555;
+}
+.coming-soon-page section.features .media .media-body p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #9c9c9c;
+}
+.coming-soon-page section.features div[class*="col-"]:nth-child(even) {
+  text-align: left;
+}
+.coming-soon-page footer {
+  background-image: url(../images/footer-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.coming-soon-page footer .top-footer .overlay {
+  background-color: rgba(255, 204, 0, 0.7);
+  padding: 60px 0;
+}
+.coming-soon-page footer .top-footer .overlay h3 {
+  font-size: 30px;
+  width: 80%;
+  margin: 0 auto 30px;
+}
+.coming-soon-page footer .top-footer .overlay .input-group {
+  width: 30%;
+  margin: 0 auto;
+  position: relative;
+}
+.coming-soon-page footer .top-footer .overlay .input-group input {
+  border-radius: 0;
+  font-size: 18px;
+  font-family: ar-font;
+  color: #c7c7c7;
+  border-color: #fff;
+  height: auto;
+}
+.coming-soon-page footer .top-footer .overlay .input-group input:hover, .coming-soon-page footer .top-footer .overlay .input-group input:focus {
+  box-shadow: 0 0 0;
+  border-color: #fff;
+}
+.coming-soon-page footer .top-footer .overlay .input-group button {
+  border-radius: 0;
+  background-color: #393939;
+  padding: .5rem 1.5rem;
+}
+.coming-soon-page footer .top-footer .overlay .input-group button:hover, .coming-soon-page footer .top-footer .overlay .input-group button:focus {
+  box-shadow: 0 0 0;
+  border-color: transparent;
+}
+.coming-soon-page footer .top-footer .overlay .alert {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  left: 0;
+}
+.coming-soon-page footer .contact .overlay {
+  background-color: rgba(28, 28, 28, 0.7);
+  padding: 60px 0 10px;
+  color: #fff;
+}
+.coming-soon-page footer .contact .overlay h3 {
+  font-size: 30px;
+  margin: 0 auto 30px;
+}
+.coming-soon-page footer .contact .overlay ul {
+  padding: 0;
+}
+.coming-soon-page footer .contact .overlay ul li {
+  margin: 0 5px 10px;
+}
+.coming-soon-page footer .contact .overlay ul li a {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 1.2em;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.coming-soon-page footer .contact .overlay ul li a.facebook:hover {
+  background-color: #3b5999;
+}
+.coming-soon-page footer .contact .overlay ul li a.twitter:hover {
+  background-color: #55acee;
+}
+.coming-soon-page footer .contact .overlay ul li a.linkedin:hover {
+  background-color: #0077B5;
+}
+.coming-soon-page footer .contact .overlay ul li a.instagram:hover {
+  background-color: #e4405f;
+}
+.coming-soon-page footer .contact .overlay hr {
+  width: 25%;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 50px;
+}
+.coming-soon-page footer .contact .overlay p a {
+  color: #b4b4b4;
+}
+.coming-soon-page footer .contact .overlay p a i {
+  color: #ffce00;
+  margin-left: 5px;
+}
+.coming-soon-page footer .contact .overlay p a:hover, .coming-soon-page footer .contact .overlay p a:focus {
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+.coming-soon-page .animate__bounceIn {
+    animation-name: none !important;
+  }
+.coming-soon-page .animate__fadeInUp {
+    animation-name: none !important;
+  }
+.coming-soon-page .animate__fadeInDown {
+    animation-name: none !important;
+  }
+.coming-soon-page .animate__zoomIn {
+    animation-name: none !important;
+  }
+.coming-soon-page header .page-heading h1 {
+    font-size: 40px;
+  }
+.coming-soon-page header .counter {
+    width: 80%;
+  }
+.coming-soon-page header .send-notification .input-group, .coming-soon-page footer .top-footer .overlay .input-group {
+    width: 60%;
+  }
+.coming-soon-page header .counter .is-countdown .countdown-section .countdown-amount {
+    font-size: 40px;
+  }
+.coming-soon-page header .counter .is-countdown .countdown-section .countdown-period {
+    font-size: 20px;
+  }
+
+
+}

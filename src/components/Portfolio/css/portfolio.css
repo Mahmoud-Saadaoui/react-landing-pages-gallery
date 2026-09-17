@@ -1,0 +1,413 @@
+.portfolio-page, .portfolio-page * {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+}
+html.portfolio-root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+.portfolio-page .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-page .section-heading {
+  font-size: 5rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 15rem;
+  border-bottom: 0.3rem solid #333;
+  text-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
+.portfolio-page .section-1 {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url(../images/bg.jpg) center no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
+.portfolio-page .section-1-heading {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #e41c6f;
+  padding: 0 3rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  border-bottom: 0.3rem solid #fff;
+  text-shadow: 0.2rem 0.2rem 1rem #555;
+  transform: skew(-10deg);
+}
+.portfolio-page .person-img {
+  width: 25rem;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.7rem dotted #e41c6f;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem;
+  opacity: 0.9;
+}
+.portfolio-page .person-name {
+  font-size: 2rem;
+  color: #fff;
+  background-color: #e41c6f;
+  margin: 5rem 0;
+  padding: 0.5rem 3rem;
+  letter-spacing: 0.3rem;
+  transform: skew(-10deg);
+}
+.portfolio-page .section-1-btn {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #fff;
+  border: 0.3rem solid #333;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+.portfolio-page .navbar {
+  width: 100%;
+  height: 4rem;
+  background-color: #e41c6f;
+  box-shadow: 0.2rem 0.2rem 0.5rem #555;
+  position: absolute;
+  z-index: 300;
+}
+.portfolio-page .sticky {
+  position: fixed;
+  top: 0;
+}
+.portfolio-page .navbar-link {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 3rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.2s;
+}
+.portfolio-page .change.navbar-link {
+  color: #fff;
+}
+.portfolio-page .navbar-link:hover {
+  color: #fff;
+}
+.portfolio-page .navbar-link::before {
+  content: "";
+  width: 0;
+  height: 0.2rem;
+  background-color: #fff;
+  position: absolute;
+  right: -15%;
+  bottom: -0.3rem;
+  transition: width 0.2s;
+}
+.portfolio-page .change.navbar-link::before {
+  width: 130%;
+}
+.portfolio-page .navbar-link:hover::before {
+  width: 130%;
+}
+.portfolio-page .section-2 {
+  width: 100%;
+  height: 100%;
+  padding: 15rem 0 10rem 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio-page .progress-bars-wrapper {
+  margin-bottom: 10rem;
+}
+.portfolio-page .progress-bar {
+  width: 60rem;
+  height: 3rem;
+  background-color: #ccc;
+  margin: 1.5rem 0;
+  border-radius: 0.3rem;
+  box-shadow: 0.2rem 0.2rem 1rem #555;
+  position: relative;
+}
+.portfolio-page .progress-text {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.portfolio-page .progress-text span {
+  margin: 0 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.portfolio-page .progress-percent {
+  width: 0;
+  height: 100%;
+  background-color: #e41c6f;
+  border-radius: 0.3rem;
+  transition: width 0.5s 0.5s ease-in-out;
+}
+.portfolio-page .services {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.portfolio-page .service {
+  text-align: center;
+}
+.portfolio-page .service:first-child, .portfolio-page .service:last-child {
+  align-self: flex-start;
+}
+.portfolio-page .service i {
+  font-size: 10rem;
+  color: #888;
+  margin-bottom: 2rem;
+  text-shadow: 0.1rem 0.1rem 0.5rem #555;
+}
+.portfolio-page .service h2 {
+  font-size: 2rem;
+  color: #fff;
+  background-color: #777;
+  width: 25rem;
+  letter-spacing: 0.3rem;
+  transform: skew(-10deg);
+  box-shadow: 0.2rem 0.2rem 0.5rem #555;
+}
+.portfolio-page .section-3 {
+  width: 100%;
+  height: 100%;
+  padding: 10rem 0;
+  background-color: #eef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio-page .projects-wrapper {
+  width: 80%;
+  flex-wrap: wrap;
+}
+.portfolio-page .project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  background-color: #fff;
+  box-shadow: 0.3rem 0.3rem 0.5rem #777;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+}
+.portfolio-page .project:hover {
+  box-shadow: 1rem 1rem 1rem #777;
+}
+.portfolio-page .project-text {
+  text-align: center;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  top: -10rem;
+  z-index: 10;
+  transition: top 0.3s;
+}
+.portfolio-page .project:hover .project-text {
+  top: 5rem;
+  transition: top 0.3s 0.3s;
+}
+.portfolio-page .project-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: capitalize;
+}
+.portfolio-page .project-technologies {
+  font-size: 1.8rem;
+  color: #e41c6f;
+}
+.portfolio-page .project-img {
+  width: 40rem;
+  transition: opacity 0.3s;
+}
+.portfolio-page .project:hover .project-img {
+  opacity: 0.2;
+}
+.portfolio-page .project-link {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 0.1rem;
+  border: 0.3rem solid #e41c6f;
+  padding: 0 1rem;
+  background-color: #fff;
+  position: absolute;
+  bottom: -5rem;
+  transition: bottom 0.3s;
+}
+.portfolio-page .project:hover .project-link {
+  bottom: 5rem;
+  transition: bottom 0.3s 0.3s;
+}
+.portfolio-page .section-4 {
+  width: 100%;
+  height: 70vh;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.portfolio-page .section-4-heading {
+  color: #fff;
+  box-shadow: none;
+  border-color: #fff;
+  margin-bottom: 5rem;
+}
+.portfolio-page .contact-form {
+  width: 50rem;
+  flex-direction: column;
+}
+.portfolio-page .contact-form input, .portfolio-page .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  background-color: #eef;
+  font-size: 1.5rem;
+  border: 0.2rem solid #e41c6f;
+  color: #555;
+}
+.portfolio-page .contact-form textarea {
+  height: 10rem;
+  max-height: 15rem;
+  max-width: 100%;
+}
+.portfolio-page .contact-form .contact-form-btn {
+  background-color: #e41c6f;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  cursor: pointer;
+}
+.portfolio-page .section-5 {
+  width: 100%;
+  height: 30vh;
+  background-color: #222;
+  flex-direction: column;
+}
+.portfolio-page .social-media {
+  margin-bottom: 5rem;
+}
+.portfolio-page .social-media-link {
+  margin: 0 2rem;
+  padding: 0.7rem;
+  background-color: #e41c6f;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+.portfolio-page .social-media-link i {
+  font-size: 3rem;
+  color: #fff;
+}
+.portfolio-page .copyright {
+  color: #aaa;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+.portfolio-page .services {
+    height: auto;
+    flex-wrap: wrap;
+  }
+.portfolio-page .service {
+    margin: 3rem 2rem;
+  }
+.portfolio-page .section-4 {
+    height: 80vh;
+  }
+
+
+}
+@media (max-width: 800px) {
+.portfolio-page .section-1-heading {
+    font-size: 4rem;
+  }
+.portfolio-page .progress-bar {
+    width: 50rem;
+  }
+
+
+}
+@media (max-width: 600px) {
+.portfolio-page .section-1-heading {
+    font-size: 3rem;
+  }
+.portfolio-page .navbar-link {
+    margin: 0 2rem;
+    font-size: 1.5rem;
+  }
+.portfolio-page .section-2 {
+    padding: 10rem;
+  }
+.portfolio-page .section-2-heading {
+    margin-bottom: 10rem;
+  }
+.portfolio-page .progress-bar {
+    width: 45rem;
+  }
+.portfolio-page .project-img {
+    width: 100%;
+  }
+.portfolio-page .contact-form {
+    width: 40rem;
+  }
+.portfolio-page .copyright {
+    width: 70%;
+  }
+
+
+}
+@media (max-width: 500px) {
+html.portfolio-root {
+    font-size: 55%;
+  }
+
+
+}
+@media (max-width: 450px) {
+html.portfolio-root {
+    font-size: 45%;
+  }
+.portfolio-page .section-1-heading {
+    font-size: 2.5rem;
+  }
+.portfolio-page .navbar-link {
+    margin: 0 1.5rem;
+  }
+.portfolio-page .section-2-heading {
+    text-align: center;
+  }
+.portfolio-page .progress-bar {
+    width: 40rem;
+  }
+
+
+}
+
+

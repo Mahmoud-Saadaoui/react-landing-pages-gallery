@@ -1,0 +1,236 @@
+.dashboard-page {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+}
+.dashboard-page .d-flex {
+  display: flex;
+}
+.dashboard-page .f-wrap {
+  flex-wrap: wrap;
+}
+.dashboard-page .align-center {
+  align-items: center;
+}
+.dashboard-page .space-between {
+  justify-content: space-between;
+}
+.dashboard-page .d-grid {
+  display: grid;
+}
+.dashboard-page .gap-20 {
+  gap: 20px;
+}
+.dashboard-page .d-block {
+  display: block;
+}
+@media (max-width: 767px) {
+.dashboard-page .block-mobile {
+    display: block;
+  }
+.dashboard-page .hide-mobile {
+    display: none;
+  }
+
+
+}
+.dashboard-page .p-10 {
+  padding: 10px;
+}
+.dashboard-page .p-15 {
+  padding: 15px;
+}
+.dashboard-page .p-20 {
+  padding: 20px;
+}
+.dashboard-page .pt-10 {
+  padding-top: 10px;
+}
+.dashboard-page .pt-15 {
+  padding-top: 15px;
+}
+.dashboard-page .pt-20 {
+  padding-top: 20px;
+}
+.dashboard-page .pb-10 {
+  padding-bottom: 10px;
+}
+.dashboard-page .pb-15 {
+  padding-bottom: 15px;
+}
+.dashboard-page .pb-20 {
+  padding-bottom: 20px;
+}
+.dashboard-page .pl-15 {
+  padding-left: 15px;
+}
+.dashboard-page .m-0 {
+  margin: 0;
+}
+.dashboard-page .m-15 {
+  margin: 15px;
+}
+.dashboard-page .m-20 {
+  margin: 20px;
+}
+.dashboard-page .mt-0 {
+  margin-top: 0;
+}
+.dashboard-page .mt-5 {
+  margin-top: 5px;
+}
+.dashboard-page .mt-10 {
+  margin-top: 10px;
+}
+.dashboard-page .mt-15 {
+  margin-top: 15px;
+}
+.dashboard-page .mt-20 {
+  margin-top: 20px;
+}
+.dashboard-page .mt-25 {
+  margin-top: 25px;
+}
+.dashboard-page .mr-10 {
+  margin-right: 10px;
+}
+.dashboard-page .mr-15 {
+  margin-right: 15px;
+}
+.dashboard-page .mb-5 {
+  margin-bottom: 5px;
+}
+.dashboard-page .mb-10 {
+  margin-bottom: 10px;
+}
+.dashboard-page .mb-15 {
+  margin-bottom: 15px;
+}
+.dashboard-page .mb-20 {
+  margin-bottom: 20px;
+}
+.dashboard-page .mb-25 {
+  margin-bottom: 25px;
+}
+.dashboard-page .c-black {
+  color: black;
+}
+.dashboard-page .c-white {
+  color: white;
+}
+.dashboard-page .c-grey {
+  color: var(--grey-color);
+}
+.dashboard-page .c-red {
+  color: var(--red-color);
+}
+.dashboard-page .c-green {
+  color: var(--green-color);
+}
+.dashboard-page .c-blue {
+  color: var(--blue-color);
+}
+.dashboard-page .c-orange {
+  color: var(--orange-color);
+}
+.dashboard-page .bg-red {
+  background-color: var(--red-color);
+}
+.dashboard-page .bg-green {
+  background-color: var(--green-color);
+}
+.dashboard-page .bg-blue {
+  background-color: var(--blue-color);
+}
+.dashboard-page .bg-orange {
+  background-color: var(--orange-color);
+}
+.dashboard-page .bg-white {
+  background-color: white;
+}
+.dashboard-page .bg-eee {
+  background-color: #eee;
+}
+.dashboard-page .p-relative {
+  position: relative;
+}
+.dashboard-page .p-absolute {
+  position: absolute;
+}
+.dashboard-page .txt-c {
+  text-align: center;
+}
+.dashboard-page .fs-13 {
+  font-size: 13px;
+}
+.dashboard-page .fs-14 {
+  font-size: 14px;
+}
+.dashboard-page .fs-15 {
+  font-size: 15px;
+}
+.dashboard-page .fs-25 {
+  font-size: 25px;
+}
+.dashboard-page .fw-bold {
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+.dashboard-page .txt-c-mobile {
+    text-align: center;
+  }
+
+
+}
+.dashboard-page .rad-6 {
+  border-radius: 6px;
+}
+.dashboard-page .rad-10 {
+  border-radius: 10px;
+}
+.dashboard-page .rad-half {
+  border-radius: 50%;
+}
+.dashboard-page .b-none {
+  border: none;
+}
+.dashboard-page .border-ccc {
+  border: 1px solid #ccc;
+}
+.dashboard-page .border-eee {
+  border: 1px solid #eee;
+}
+.dashboard-page .w-full {
+  width: 100%;
+}
+.dashboard-page .w-100 {
+  width: 100px;
+}
+.dashboard-page .w-fit {
+  width: fit-content;
+}
+.dashboard-page .h-full {
+  height: 100%;
+}
+.dashboard-page .h-100 {
+  height: 100px;
+}
+.dashboard-page .center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard-page .between-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard-page .btn-shape {
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+
