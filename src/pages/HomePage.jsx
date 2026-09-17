@@ -97,9 +97,6 @@ const HomePage = () => {
         <h1 className="mx-auto max-w-3xl font-display text-4xl font-bold leading-tight text-[#0F172A] sm:text-5xl">
           {t("gallery.title")}
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-[#5B6B80]">
-          {t("gallery.sub")}
-        </p>
       </header>
 
       <div
