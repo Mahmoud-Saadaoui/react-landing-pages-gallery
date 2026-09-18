@@ -34,7 +34,11 @@ const LandingLayout = () => {
   return (
     <>
       <BackToGallery />
-      <div dir={page.rtl ? "rtl" : "ltr"}>
+      <div
+        className="landing-scope"
+        data-landing={page.scope}
+        dir={page.rtl ? "rtl" : "ltr"}
+      >
         <Component page={page} />
       </div>
     </>
