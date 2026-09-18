@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import "../components/SpecialDesign/css/normalize.css";
-import "../components/SpecialDesign/css/master.css";
 import SettingsBox from "../components/SpecialDesign/SettingsBox";
 import NavBullets from "../components/SpecialDesign/NavBullets";
 import Landing from "../components/SpecialDesign/Landing";
@@ -107,7 +105,10 @@ const SpecialDesignPage = () => {
   };
 
   return (
-    <div className="special-design-page">
+    <div
+      className="special-design-page"
+      style={{ "--main-color": color || "#FF9800" }}
+    >
       <SettingsBox
         open={settingsOpen}
         onToggleOpen={() => setSettingsOpen((o) => !o)}
@@ -133,11 +134,18 @@ const SpecialDesignPage = () => {
       <Footer />
       {popup && (
         <>
-          <div className="popup-overlay" />
-          <div className="popup-box">
-            {popup.alt && <h3>{popup.alt}</h3>}
-            <img src={popup.src} alt="" />
-            <span className="close-button" onClick={() => setPopup(null)}>
+          <div className="fixed left-0 top-0 z-[1000] h-full w-full bg-black/70" />
+          <div className="fixed left-1/2 top-1/2 z-[1001] -translate-x-1/2 -translate-y-1/2 border border-[#CCC] bg-white p-[20px]">
+            {popup.alt && (
+              <h3 className="mb-[20px] text-center font-bold text-[var(--main-color)]">
+                {popup.alt}
+              </h3>
+            )}
+            <img src={popup.src} alt="" className="max-w-full" />
+            <span
+              className="absolute right-[-15px] top-[-15px] flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-[var(--main-color)] text-[20px] font-bold text-white [font-family:Arial,Tahoma]"
+              onClick={() => setPopup(null)}
+            >
               X
             </span>
           </div>

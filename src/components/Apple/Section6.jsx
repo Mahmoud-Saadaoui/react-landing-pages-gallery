@@ -1,15 +1,17 @@
 import { footerIcons } from "./data";
 
 const Section6 = () => (
-  <section className="section-6 center">
-    <div className="section-6-icons">
+  <section className="relative flex h-[40vh] w-full items-center justify-center">
+    <div>
       {footerIcons.map(({ href, img, label }) => (
-        <a href={href} className="icon-link" key={label}>
-          <img src={img} alt={label} />
+        <a href={href} className="mx-[5rem] max-[700px]:mx-[2rem]" key={label}>
+          <img src={img} className="w-[10rem] max-[550px]:w-[8rem] max-[450px]:w-[6rem]" alt={label} />
         </a>
       ))}
     </div>
-    <p className="copyright">Copyright &copy; CodeAndCreate All Rights Reserved</p>
+    <p className="absolute bottom-[5rem] text-[1.5rem] tracking-[0.1rem]">
+      Copyright &copy; CodeAndCreate All Rights Reserved
+    </p>
   </section>
 );
 

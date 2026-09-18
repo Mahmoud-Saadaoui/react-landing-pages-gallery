@@ -6,7 +6,6 @@ import PricingTable from "../components/Plans/PricingTable";
 import TheySay from "../components/Plans/TheySay";
 import Information from "../components/Plans/Information";
 import Footer from "../components/Plans/Footer";
-import "../components/Plans/css/plans.css";
 
 const PlansPage = () => (
   <>

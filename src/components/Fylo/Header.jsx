@@ -1,19 +1,25 @@
+import logoLight from "./images/logo-light-mode.svg";
+import logoDark from "./images/logo-dark-mode.svg";
+
 const Header = ({ dark, onToggle }) => (
-  <header className="container mx-auto mt-10 h-40 px-6 text-center md:h-20">
-    <div className="bg-logo-light-mode dark:bg-logo-dark-mode mx-auto h-20 w-48 bg-no-repeat md:absolute top-10 left-10 md:mx-0" />
+  <header className="mx-auto mt-10 h-40 w-full px-6 text-center md:h-20 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+    <div
+      className="mx-auto h-20 w-48 bg-no-repeat md:absolute top-10 left-10 md:mx-0"
+      style={{ backgroundImage: `url(${dark ? logoDark : logoLight})` }}
+    />
 
     <div className="flex items-center justify-center space-x-4 md:absolute top-12 right-10 md:space-x-10">
-      <a href="#features" className="hover:text-accentCyan">
+      <a href="#features" className="hover:text-[hsl(176_68%_64%)]">
         Features
       </a>
-      <a href="#testimonials" className="hover:text-accentCyan">
+      <a href="#testimonials" className="hover:text-[hsl(176_68%_64%)]">
         Testimonials
       </a>
 
       <button
         type="button"
         onClick={onToggle}
-        className="rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+        className="rounded-lg p-2 text-sm text-[#6b7280] hover:bg-[#f3f4f6] focus:outline-none focus:ring-4 focus:ring-[#e5e7eb] [.dark_&]:text-[#9ca3af] [.dark_&:hover]:bg-[#374151] [.dark_&:focus]:ring-[#374151]"
       >
         <svg
           className={`h-5 w-5${dark ? " hidden" : ""}`}

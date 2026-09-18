@@ -34,43 +34,49 @@ function ContactForm() {
 
   return (
     <form id="commentForm" onSubmit={onSubmit} noValidate>
-      <div className="form-group">
+      <div className="mb-[6px]">
         <input
           type="text"
           id="cname"
           name="name"
           autoComplete="name"
-          className={`form-control${errors.name ? " is-invalid" : ""}`}
+          className={`block w-full rounded-[3px] border-none bg-[#242424] px-3 py-1.5 text-[18px] leading-[35px] text-[#aeadad]${
+            errors.name ? " border border-red-600" : ""
+          }`}
           placeholder="الاسم"
         />
-        {errors.name && <label className="error">{errors.name}</label>}
+        {errors.name && <label className="text-[red]">{errors.name}</label>}
       </div>
-      <div className="form-group">
+      <div className="mb-[6px]">
         <input
           type="email"
           id="cemail"
           name="email"
           autoComplete="email"
-          className={`form-control${errors.email ? " is-invalid" : ""}`}
+          className={`block w-full rounded-[3px] border-none bg-[#242424] px-3 py-1.5 text-[18px] leading-[35px] text-[#aeadad]${
+            errors.email ? " border border-red-600" : ""
+          }`}
           placeholder="البريد الالكترونى"
         />
-        {errors.email && <label className="error">{errors.email}</label>}
+        {errors.email && <label className="text-[red]">{errors.email}</label>}
       </div>
-      <div className="form-group">
+      <div className="mb-[6px]">
         <textarea
           autoComplete="off"
-          className={`form-control${errors.comment ? " is-invalid" : ""}`}
+          className={`block w-full rounded-[3px] border-none bg-[#242424] px-3 py-1.5 text-[18px] leading-[35px] text-[#aeadad]${
+            errors.comment ? " border border-red-600" : ""
+          }`}
           id="ccomment"
           name="comment"
           placeholder="الرسالة"
         />
-        {errors.comment && <label className="error">{errors.comment}</label>}
+        {errors.comment && <label className="text-[red]">{errors.comment}</label>}
       </div>
-      <button type="submit" name="submit" className="submit Form-Submit" value="Submit">
+      <button type="submit" name="submit" className="submit Form-Submit border-0 bg-[#7233a2] px-6 py-[7px] text-[18px] text-white">
         ارسال
         <FaAngleDoubleLeft aria-hidden="true" />
       </button>
-      {sent && <p className="sent">تم إرسال رسالتك بنجاح</p>}
+      {sent && <p className="sent mt-[10px] text-[#a044ff]">تم إرسال رسالتك بنجاح</p>}
     </form>
   );
 }
@@ -78,28 +84,28 @@ function ContactForm() {
 export default function Contact() {
   const imgs = [img1, img2];
   return (
-    <section className="contact">
-      <div className="container">
-        <div className="row">
-          <div className="col-md">
+    <section className="contact bg-[#131313] pt-[60px] pb-10 text-right">
+      <div className="mx-auto w-full px-[15px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+        <div className="row -mx-[15px] flex flex-wrap">
+          <div className="col-md grow basis-0 px-[15px]">
             <div className="contact-us">
               <div className="title">
-                <h4>تواصل معنا</h4>
+                <h4 className="text-[18px] leading-[50px] text-[#758594]">تواصل معنا</h4>
               </div>
               <ContactForm />
             </div>
           </div>
-          <div className="col-md">
+          <div className="col-md grow basis-0 px-[15px]">
             <div className="other-products">
               <div className="title">
-                <h4>المنتجات الأكثر مشاهدة</h4>
+                <h4 className="text-[18px] leading-[50px] text-[#758594]">المنتجات الأكثر مشاهدة</h4>
               </div>
               {otherProducts.map((p, i) => (
-                <div className="media" key={i}>
-                  <img src={imgs[i]} alt="Generic placeholder image" />
-                  <div className="media-body">
-                    <h5>{p.title}</h5>
-                    <p>{loremShort}</p>
+                <div className="media mb-[25px] flex items-start" key={i}>
+                  <img src={imgs[i]} alt="Generic placeholder image" className="ml-5" />
+                  <div className="media-body flex-1">
+                    <h5 className="mb-[15px] text-[18px] text-[#aeadad]">{p.title}</h5>
+                    <p className="text-[15px] leading-5 text-[#737373]">{loremShort}</p>
                   </div>
                 </div>
               ))}

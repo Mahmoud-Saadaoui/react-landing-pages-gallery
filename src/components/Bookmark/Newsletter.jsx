@@ -11,7 +11,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section id="newsletter" className="bg-softBlue">
+    <section id="newsletter" className="bg-[#5368df]">
       <div className="mx-auto max-w-lg py-24">
         <p className="mb-6 text-center text-lg uppercase tracking-widest text-white">
           35,000+ Already Joined
@@ -36,7 +36,7 @@ const Newsletter = () => {
             />
             <input
               type="submit"
-              className="inline-flex cursor-pointer rounded-lg bg-softRed px-6 py-3 text-center font-semibold text-white duration-200 hover:opacity-90 focus:outline-none"
+              className="inline-flex cursor-pointer rounded-lg bg-[#fa5757] px-6 py-3 text-center font-semibold text-white duration-200 hover:opacity-90 focus:outline-none"
               value={subscribed ? "Subscribed!" : "Contact Us"}
             />
           </div>

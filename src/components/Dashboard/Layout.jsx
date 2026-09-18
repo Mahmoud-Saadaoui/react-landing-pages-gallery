@@ -3,9 +3,9 @@ import Head from "./Head";
 
 const Layout = ({ children }) => (
   <div className="dashboard-page">
-    <div className="page d-flex">
+    <div className="flex min-h-screen bg-[#f1f5f9]">
       <Sidebar />
-      <div className="content w-full">
+      <div className="w-full overflow-hidden">
         <Head />
         {children}
       </div>

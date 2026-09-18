@@ -87,3 +87,13 @@ export const footerColumns = [
 
 export const heroDescription =
   "Welcome to our Nike shoe website, your ultimate destination for the latest and greatest in athletic footwear. Explore a wide range of Nike shoes designed to elevate your performance and style.";
+
+export const arrowClass =
+  "px-[7px] text-[24px] text-[#333333] border border-[#333333] rounded-full cursor-pointer transition-all duration-300 hover:text-[#fc6601] hover:border-[#fc6601]";
+
+const btnClass =
+  "relative text-[16px] font-medium text-[#333333] bg-transparent border-none outline-none cursor-pointer [&_span]:inline-block [&_span]:mr-[10px] [&_span]:px-[5px] [&_span]:py-[4px] [&_span]:text-[20px] [&_span]:text-white [&_span]:bg-[#fc6601]";
+
+export const btnArrow = `${btnClass} after:absolute after:content-[''] after:h-[2px] after:w-[80px] after:top-1/2 after:left-full after:translate-x-[16px] after:-translate-y-1/2 after:bg-[#fc6601]`;
+
+export const btnNoArrow = btnClass;

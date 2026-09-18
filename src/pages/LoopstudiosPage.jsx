@@ -1,4 +1,3 @@
-import "../components/Loopstudios/css/loopstudios.css";
 import Hero from "../components/Loopstudios/Hero";
 import Feature from "../components/Loopstudios/Feature";
 import Creations from "../components/Loopstudios/Creations";

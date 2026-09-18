@@ -1,4 +1,3 @@
-import "../components/Furniture/styles.css";
 import { Header } from "../components/Furniture/Header";
 import { Choose } from "../components/Furniture/Choose";
 import { Offers } from "../components/Furniture/Offers";

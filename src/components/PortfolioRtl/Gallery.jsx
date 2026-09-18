@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FaThLarge } from "react-icons/fa";
 import { galleryFilters } from "./data";
 import img1 from "./images/gallery/1.jpg";
@@ -17,15 +18,19 @@ const items = [
 ];
 
 export default function Gallery() {
+  const [active, setActive] = useState("item-type-all");
+
   return (
-    <section className="gallery" id="gallery">
-      <div className="title text-center">
-        <h2>
-          <FaThLarge aria-hidden="true" />
+    <section className="gallery pb-[90px] pt-[75px]" id="gallery">
+      <div className="title mb-[35px] text-center">
+        <h2 className="text-[30px] leading-[50px] text-[#0575e6]">
+          <span className="block">
+            <FaThLarge aria-hidden="true" />
+          </span>
           الأعمال السابقة
         </h2>
       </div>
-      <div className="container">
+      <div className="mx-auto w-full px-[15px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
         <div className="work-gallery text-center">
           {galleryFilters.map((f) => (
             <input
@@ -33,22 +38,40 @@ export default function Gallery() {
               id={f.id}
               name="radio-set-1"
               type="radio"
-              className={f.id}
-              defaultChecked={f.type === null}
+              className="hidden"
+              checked={active === f.id}
+              onChange={() => setActive(f.id)}
             />
           ))}
           {galleryFilters.map((f) => (
-            <label key={f.id} htmlFor={f.id} className={f.cls}>
+            <label
+              key={f.id}
+              htmlFor={f.id}
+              className={`mb-[40px] inline-block cursor-pointer border-2 bg-white px-[30px] py-[10px] text-[18px] leading-[35px] transition-all duration-500 mx-[7px] mt-0 ${
+                active === f.id
+                  ? "border-[#0575e6] bg-[#0575e6] text-white"
+                  : "border-[#e4eeee] text-[#8f9899] hover:border-[#0575e6] hover:bg-[#0575e6] hover:text-white"
+              }`}
+            >
               {f.label}
             </label>
           ))}
-          <div className="clear-fix" />
-          <div className="row items">
-            {items.map((it, i) => (
-              <div className={`col-md-4 col-sm-6 item ${it.type}`} key={i}>
-                <img src={it.src} alt="gallery img" className="img-fluid" />
-              </div>
-            ))}
+
+          <div className="-mx-[15px] flex flex-wrap items-center justify-center">
+            {items.map((it, i) => {
+              const all = active === "item-type-all";
+              const shown = !all && active === it.type;
+              return (
+                <div
+                  key={i}
+                  className={`item w-full px-[15px] transition-all duration-[600ms] sm:max-w-[50%] sm:flex-[0_0_50%] md:max-w-[33.333333%] md:flex-[0_0_33.333333%] ${
+                    it.type
+                  } ${all ? "opacity-100 scale-100" : shown ? "opacity-100 scale-[1.08]" : "opacity-50 scale-[0.8]"}`}
+                >
+                  <img src={it.src} alt="gallery img" className="mb-[25px] block w-full" />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

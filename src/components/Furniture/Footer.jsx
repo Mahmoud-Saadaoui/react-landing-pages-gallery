@@ -13,30 +13,50 @@ export const Footer = () => {
   }, []);
 
   return (
-    <footer className="footer">
-      <div className="section__container footer__container">
-        <div className="footer__content">
-          <h4>SUBSCRIBE TO GET THE LATEST NEWS ABOUT US</h4>
-          <p>{footerText}</p>
+    <footer className="bg-[#2f2f2f]">
+      <div className="mx-auto grid w-full max-w-[1200px] grid-cols-2 items-center gap-20 border-b border-white px-4 py-20 max-[900px]:grid-cols-1 max-[900px]:text-center">
+        <div>
+          <h4 className="mb-4 text-[2rem] font-semibold leading-[2.5rem] text-white">
+            SUBSCRIBE TO GET THE LATEST NEWS ABOUT US
+          </h4>
+          <p className="text-white">{footerText}</p>
         </div>
-        <div className="footer__form">
-          <form action="/" ref={formRef}>
-            <input type="text" name="email" autoComplete="off" placeholder="Enter your email" />
-            <button>Subscribe</button>
+        <div>
+          <form
+            action="/"
+            ref={formRef}
+            className="mx-auto flex w-full max-w-[600px] items-center gap-4 rounded-[10px] bg-white p-[5px]"
+          >
+            <input
+              type="text"
+              name="email"
+              autoComplete="off"
+              placeholder="Enter your email"
+              className="w-full border-none px-4 text-base outline-none"
+            />
+            <button className="cursor-pointer rounded-[5px] border-none bg-[#2f2f2f] px-6 py-4 text-[1.2rem] text-white outline-none">
+              Subscribe
+            </button>
           </form>
         </div>
       </div>
-      <div className="section__container footer__bar">
-        <div className="footer__logo">
+      <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-8 px-4 py-16 max-[600px]:flex-col">
+        <div>
           <h4>
-            <a href="#">MyFurniture</a>
+            <a href="#" className="text-2xl font-semibold text-white">
+              MyFurniture
+            </a>
           </h4>
-          <p>Copyright © 2023 Web Design Mastery. All rights reserved.</p>
+          <p className="mt-[5px] text-[0.8rem] text-white">
+            Copyright © 2023 Web Design Mastery. All rights reserved.
+          </p>
         </div>
-        <ul className="footer__nav">
+        <ul className="flex list-none items-center gap-8">
           {footerLinks.map((label) => (
-            <li className="footer__link" key={label}>
-              <a href="#">{label}</a>
+            <li key={label}>
+              <a href="#" className="font-medium whitespace-nowrap text-white">
+                {label}
+              </a>
             </li>
           ))}
         </ul>

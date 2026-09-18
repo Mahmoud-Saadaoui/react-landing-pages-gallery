@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "../components/Architect/css/architect.css";
 import Spinner from "../components/Architect/Spinner";
 import Hamburger from "../components/Architect/Hamburger";
 import Banner from "../components/Architect/Banner";
@@ -25,10 +24,32 @@ const ArchitectPage = () => {
   }, []);
 
   return (
-    <div className="architect-page">
-      <div className={displayed ? "display" : ""}>
+    <>
+      <style>
+        {`
+@keyframes displayCircles {
+  0% { opacity: 0; visibility: hidden; }
+  25% { opacity: 1; visibility: visible; }
+  90% { opacity: 1; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; }
+}
+@keyframes circles {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes scale {
+  0% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+@keyframes moveBanner {
+  0% { transform: translateY(40rem) rotateY(-20deg); }
+  100% { transform: translateY(0) rotateY(0); opacity: 1; }
+}
+`}
+      </style>
+      <div className={`architect-page group/display${displayed ? " display" : ""}`}>
         <Spinner />
-        <div className={`container${menuOpen ? " change" : ""}`}>
+        <div className={`container group/change${displayed ? " block" : " hidden"}${menuOpen ? " change" : ""}`}>
           <Hamburger open={menuOpen} onToggle={() => setMenuOpen((o) => !o)} />
           <Banner />
           <Sidebar onNavigate={() => setMenuOpen(false)} />
@@ -39,7 +60,7 @@ const ArchitectPage = () => {
           <ScrollBtn />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,5 @@
 import TestimonialGridCard from "../components/TestimonialGrid/TestimonialGridCard";
 import cards from "../components/TestimonialGrid/cards";
-import "../components/TestimonialGrid/TestimonialGrid.css";
 
 const TestimonialGridPage = () => (
   <div className="testimonial-grid min-h-screen bg-gray-200">

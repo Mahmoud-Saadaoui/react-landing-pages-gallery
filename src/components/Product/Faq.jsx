@@ -10,17 +10,22 @@ function Accordion({ items }) {
   return (
     <div>
       {items.map((item, i) => (
-        <div className="card" key={i}>
-          <div className="card-header">
+        <div className="card mb-[15px] flex flex-col rounded-none border border-[#ebebeb]" key={i}>
+          <div className="card-header border-b-0 bg-transparent">
             <h5>
-              <a onClick={() => toggle(i)}>
+              <a
+                onClick={() => toggle(i)}
+                className="relative block cursor-pointer text-[18px] font-bold text-[#555] no-underline hover:no-underline"
+              >
                 {item.q}
-                {open === i ? <OpenIcon /> : <ClosedIcon />}
+                <span className="absolute left-[5px] top-[2px]">
+                  {open === i ? <OpenIcon /> : <ClosedIcon />}
+                </span>
               </a>
             </h5>
           </div>
-          <div className={`collapse${open === i ? " show" : ""}`}>
-            <div className="card-block">{lorem}</div>
+          <div className={open === i ? "block" : "hidden"}>
+            <div className="card-block px-5 pb-5 text-[15px] leading-[24px] text-[#b3b3b3]">{lorem}</div>
           </div>
         </div>
       ))}
@@ -30,14 +35,14 @@ function Accordion({ items }) {
 
 export default function Faq() {
   return (
-    <section className="faq">
-      <div className="title text-center">
-        <h3>الأسئلة الأكثر شيوعاً</h3>
+    <section className="faq bg-white py-[55px] text-right">
+      <div className="title mb-[50px] text-center">
+        <h3 className="text-[30px] text-[#555]">الأسئلة الأكثر شيوعاً</h3>
       </div>
-      <div className="container">
-        <div className="row">
+      <div className="mx-auto w-full px-[15px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+        <div className="row -mx-[15px] flex flex-wrap">
           {faqGroups.map((group, i) => (
-            <div className="col-lg-4 col-md-6" key={i}>
+            <div className="col-lg-4 col-md-6 w-full px-[15px] md:flex-none md:w-1/2 lg:w-1/3" key={i}>
               <Accordion items={group} />
             </div>
           ))}

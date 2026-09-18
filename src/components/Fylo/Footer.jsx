@@ -1,14 +1,14 @@
 import { footerMenus, footerContact, footerSocials } from "./data";
 
 const Footer = () => (
-  <footer className="bg-darkBlue2 text-white">
-    <div className="container mx-auto px-5 pt-12 pb-10">
+  <footer className="bg-[hsl(216_53%_9%)] text-white">
+    <div className="mx-auto w-full px-5 pt-12 pb-10 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
       <div className="flex flex-col justify-between space-y-24 md:flex-row md:space-y-0">
         <div className="mt-10 space-y-6">
           {footerContact.map((item) => (
             <div key={item.text} className="flex items-center space-x-3">
               <div className="w-6">
-                <img src={item.icon} alt="" className="scale-10" loading="lazy" />
+                <img src={item.icon} alt="" loading="lazy" />
               </div>
               <div>{item.text}</div>
             </div>
@@ -34,7 +34,7 @@ const Footer = () => (
                 <img
                   src={icon}
                   alt=""
-                  className="bg-darkBlue ficon rounded-full p-2"
+                  className="bg-[hsl(217_28%_15%)] rounded-full p-2 hover:[filter:invert(80%)_sepia(37%)_saturate(7048%)_hue-rotate(132deg)_brightness(105%)_contrast(104%)]"
                   loading="lazy"
                 />
               </a>

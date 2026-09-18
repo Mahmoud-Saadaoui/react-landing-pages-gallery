@@ -18,10 +18,10 @@ const Contacts = () => {
   };
 
   return (
-    <section className="contacts" id="contacts">
-      <div className="container">
-        <div className="row">
-          <div className="col-md">
+    <section className="contacts bg-white pt-[100px] text-right" id="contacts">
+      <div className="mx-auto w-full px-[15px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+        <div className="-mx-[15px] flex flex-wrap">
+          <div className="w-full px-[15px] md:max-w-full md:grow md:basis-0">
             <div className="map">
               <iframe
                 title="company map"
@@ -34,53 +34,66 @@ const Contacts = () => {
               />
             </div>
           </div>
-          <div className="col-md">
+          <div className="w-full px-[15px] md:max-w-full md:grow md:basis-0">
             <div className="info">
-              <h3>عنوان الشركة</h3>
-              <ul className="list-unstyled">
+              <h3 className="text-[24px] font-bold leading-[50px] text-[#181c1c]">عنوان الشركة</h3>
+              <ul className="m-0 list-none p-0">
                 {addresses.map((a) => (
-                  <li key={a}>
-                    <FaMapMarkerAlt aria-hidden="true" /> {a}
+                  <li key={a} className="mb-[15px] text-[18px] leading-[25px] text-[#16aeca]">
+                    <FaMapMarkerAlt className="ml-[6px] inline-block" aria-hidden="true" /> {a}
                   </li>
                 ))}
               </ul>
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-12">
+        <div className="-mx-[15px] flex flex-wrap">
+          <div className="w-full px-[15px] md:max-w-full md:flex-[0_0_100%]">
             <div className="form text-center">
-              <h3>تواصل معنا</h3>
-              <form className="cmxform row" id="commentForm" onSubmit={submit} noValidate>
-                <div className="form-group col-sm-6">
+              <h3 className="my-[50px] mx-auto mb-5 text-[24px] font-bold leading-[50px] text-[#181c1c]">
+                تواصل معنا
+              </h3>
+              <form
+                className="mx-auto mb-[50px] flex w-3/5 flex-wrap max-[767px]:w-full"
+                id="commentForm"
+                onSubmit={submit}
+                noValidate
+              >
+                <div className="mb-4 w-full px-[15px] sm:flex-[0_0_50%] sm:max-w-[50%]">
                   <input
                     type="text"
                     id="cname"
                     name="name"
-                    className={`form-control${errors.name ? " error" : ""}`}
+                    className={`block w-full rounded-[3px] border-2 border-[#eee] bg-[#f7f7f7] text-[15px] leading-[25px] text-[#5c5c5c]${
+                      errors.name ? " error" : ""
+                    }`}
                     placeholder="الاسم"
                     required
                     value={values.name}
                     onChange={set("name")}
                   />
-                  {errors.name && <label className="error">{errors.name}</label>}
+                  {errors.name && <label className="error block text-[#ff0000]">{errors.name}</label>}
                 </div>
-                <div className="form-group col-sm-6">
+                <div className="mb-4 w-full px-[15px] sm:flex-[0_0_50%] sm:max-w-[50%]">
                   <input
                     type="email"
                     id="cemail"
                     name="email"
-                    className={`form-control${errors.email ? " error" : ""}`}
+                    className={`block w-full rounded-[3px] border-2 border-[#eee] bg-[#f7f7f7] text-[15px] leading-[25px] text-[#5c5c5c]${
+                      errors.email ? " error" : ""
+                    }`}
                     placeholder="البريد الالكترونى"
                     required
                     value={values.email}
                     onChange={set("email")}
                   />
-                  {errors.email && <label className="error">{errors.email}</label>}
+                  {errors.email && <label className="error block text-[#ff0000]">{errors.email}</label>}
                 </div>
-                <div className="form-group col-sm-12">
+                <div className="mb-4 w-full px-[15px] sm:flex-[0_0_100%] sm:max-w-full">
                   <textarea
-                    className={`form-control${errors.comment ? " error" : ""}`}
+                    className={`block w-full rounded-[3px] border-2 border-[#eee] bg-[#f7f7f7] text-[15px] leading-[25px] text-[#5c5c5c]${
+                      errors.comment ? " error" : ""
+                    }`}
                     id="ccomment"
                     name="comment"
                     placeholder="الرسالة"
@@ -88,9 +101,14 @@ const Contacts = () => {
                     value={values.comment}
                     onChange={set("comment")}
                   />
-                  {errors.comment && <label className="error">{errors.comment}</label>}
+                  {errors.comment && <label className="error block text-[#ff0000]">{errors.comment}</label>}
                 </div>
-                <button type="submit" name="submit" className="submit Form-Submit" value="Submit">
+                <button
+                  type="submit"
+                  name="submit"
+                  className="mr-[15px] rounded-[3px] border-0 bg-[#16aeca] px-[25px] py-[10px] text-[15px] leading-[25px] text-white"
+                  value="Submit"
+                >
                   ارسال
                 </button>
               </form>

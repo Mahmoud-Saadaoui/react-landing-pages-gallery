@@ -6,10 +6,9 @@ import Portfolio from "../components/Leon/Portfolio";
 import About from "../components/Leon/About";
 import Contact from "../components/Leon/Contact";
 import Footer from "../components/Leon/Footer";
-import "../components/Leon/css/leon.css";
 
 const LeonPage = () => (
-  <>
+  <div className="scroll-smooth">
     <Header />
     <Hero />
     <Features />
@@ -18,7 +17,7 @@ const LeonPage = () => (
     <About />
     <Contact />
     <Footer />
-  </>
+  </div>
 );
 
 export default LeonPage;

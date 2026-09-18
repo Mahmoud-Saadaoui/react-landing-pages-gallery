@@ -14,7 +14,7 @@ const useWOW = () => {
           const el = entry.target;
           el.classList.add("played");
           const name = el.dataset.wow;
-          if (name) el.classList.add(`animate__${name}`);
+          if (name) el.classList.add(`animate-${name}`);
           io.unobserve(el);
         }
       },

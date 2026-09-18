@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { logo, navLinks, heroText } from "./data";
+import heroDesktop from "./images/desktop/image-hero.jpg";
+import heroMobile from "./images/mobile/image-hero.jpg";
 
 const NavLink = ({ label }) => (
   <div className="group">
     <a href="#">{label}</a>
-    <div className="border-blue-50 mx-2 group-hover:border-b" />
+    <div className="mx-2 border-blue-50 group-hover:border-b" />
   </div>
 );
 
@@ -12,11 +14,20 @@ const Hero = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <section id="hero">
-      <div className="mx-auto max-w-6xl px-6 py-12">
+    <section
+      id="hero"
+      className="relative bg-cover bg-no-repeat"
+      style={{ backgroundImage: `url(${heroDesktop})` }}
+    >
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 hidden bg-cover bg-center max-[576px]:block"
+        style={{ backgroundImage: `url(${heroMobile})` }}
+      />
+      <div className="relative mx-auto max-w-6xl px-6 py-12">
         <nav className="flex items-center justify-between font-bold text-white">
           <img src={logo} alt="" />
-          <div className="font-alata hidden h-10 md:flex md:space-x-8">
+          <div className="hidden h-10 md:flex md:gap-8">
             {navLinks.map((link) => (
               <NavLink key={link} label={link} />
             ))}
@@ -24,20 +35,38 @@ const Hero = () => {
           <div className="md:hidden">
             <button
               type="button"
+              aria-label="Toggle menu"
+              aria-expanded={open}
               onClick={() => setOpen((value) => !value)}
-              className={`focus:outline-none hamburger z-40 block md:hidden${open ? " open" : ""}`}
+              className={`relative z-40 block h-6 w-6 transition-all duration-[250ms] focus:outline-none ${
+                open ? "rotate-90" : ""
+              }`}
             >
-              <span className="hamburger-top" />
-              <span className="hamburger-middle" />
-              <span className="hamburger-bottom" />
+              <span
+                className={`absolute left-0 top-0 h-[2px] w-6 bg-white transition-all duration-500 ${
+                  open ? "translate-x-1.5 translate-y-1.5 rotate-45" : ""
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-0 h-[2px] w-6 bg-white transition-all duration-500 ${
+                  open ? "hidden" : "translate-y-[7px]"
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-0 h-[2px] w-6 bg-white transition-all duration-500 ${
+                  open
+                    ? "-translate-x-1.5 translate-y-1.5 -rotate-45"
+                    : "translate-y-[14px]"
+                }`}
+              />
             </button>
           </div>
         </nav>
 
         <div
           id="menu"
-          className={`absolute top-0 bottom-0 left-0 flex-col self-end min-h-screen w-full space-y-3 bg-black py-1 pt-40 pl-12 text-lg uppercase text-white${
-            open ? " flex" : " hidden"
+          className={`absolute bottom-0 left-0 top-0 flex-col space-y-3 bg-black py-1 pl-12 pt-40 text-lg uppercase text-white min-h-screen w-full ${
+            open ? "flex" : "hidden"
           }`}
         >
           {navLinks.map((link) => (
@@ -47,7 +76,7 @@ const Hero = () => {
           ))}
         </div>
 
-        <div className="mt-32 mb-32 max-w-lg border-2 p-4 font-sans text-4xl uppercase text-white md:m-32 md:mx-0 md:p-10 md:text-6xl">
+        <div className="mb-32 mt-32 max-w-lg border-2 p-4 font-sans text-4xl uppercase text-white md:m-32 md:mx-0 md:p-10 md:text-6xl">
           {heroText}
         </div>
       </div>

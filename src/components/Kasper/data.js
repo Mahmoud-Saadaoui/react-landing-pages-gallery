@@ -1,3 +1,17 @@
+import {
+  FaCamera,
+  FaCog,
+  FaDesktop,
+  FaEnvelope,
+  FaFacebookF,
+  FaFolder,
+  FaHome,
+  FaLinkedin,
+  FaMugHot,
+  FaPencilRuler,
+  FaTrophy,
+  FaTwitter,
+} from "react-icons/fa";
 import shuffle1 from "./images/shuffle-01.jpg";
 import shuffle2 from "./images/shuffle-02.jpg";
 import shuffle3 from "./images/shuffle-03.jpg";
@@ -22,10 +36,10 @@ export const servicesText =
   "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam.";
 
 export const services = [
-  { icon: "fa-desktop", title: "Vorem amet intuitive", text: servicesText },
-  { icon: "fa-cog", title: "Vorem amet intuitive", text: servicesText },
-  { icon: "fa-pencil-ruler", title: "Vorem amet intuitive", text: servicesText },
-  { icon: "fa-camera", title: "Vorem amet intuitive", text: servicesText },
+  { icon: FaDesktop, title: "Vorem amet intuitive", text: servicesText },
+  { icon: FaCog, title: "Vorem amet intuitive", text: servicesText },
+  { icon: FaPencilRuler, title: "Vorem amet intuitive", text: servicesText },
+  { icon: FaCamera, title: "Vorem amet intuitive", text: servicesText },
 ];
 
 export const designFeatures = [
@@ -49,10 +63,10 @@ export const portfolioImages = [
 ];
 
 export const stats = [
-  { icon: "fas fa-mug-hot", number: "1.236", label: "Coffee Drinks" },
-  { icon: "far fa-folder", number: "256", label: "Completed Projects" },
-  { icon: "far fa-envelope", number: "1,743", label: "Mail Sent" },
-  { icon: "fas fa-trophy", number: "17", label: "Awards Received" },
+  { icon: FaMugHot, number: "1.236", label: "Coffee Drinks" },
+  { icon: FaFolder, number: "256", label: "Completed Projects" },
+  { icon: FaEnvelope, number: "1,743", label: "Mail Sent" },
+  { icon: FaTrophy, number: "17", label: "Awards Received" },
 ];
 
 export const testimonials = [
@@ -83,8 +97,8 @@ export const plans = [
 ];
 
 export const socialIcons = [
-  "fab fa-facebook-f",
-  "fab fa-twitter",
-  "fas fa-home",
-  "fab fa-linkedin",
+  FaFacebookF,
+  FaTwitter,
+  FaHome,
+  FaLinkedin,
 ];

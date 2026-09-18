@@ -8,9 +8,6 @@ import Courses from "../components/Dashboard/Courses";
 import Friends from "../components/Dashboard/Friends";
 import Files from "../components/Dashboard/Files";
 import Plans from "../components/Dashboard/Plans";
-import "../components/Dashboard/css/framework.css";
-import "../components/Dashboard/css/master.css";
-import "../components/Dashboard/css/all.min.css";
 
 const sections = {
   "": Home,

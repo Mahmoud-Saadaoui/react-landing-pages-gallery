@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import "../components/Apple/css/apple.css";
 import Section1 from "../components/Apple/Section1";
 import Section2 from "../components/Apple/Section2";
 import Section3 from "../components/Apple/Section3";

@@ -1,75 +1,86 @@
+import { FaStar } from "react-icons/fa6";
 import { images } from "./images";
 import { profileData } from "./data";
+import Toggle from "./Toggle";
+import PageTitle from "./PageTitle";
 
 const Profile = () => {
   const { name, level, levelWidth, rating, ratingText, infoBoxes, skills, activities } = profileData;
 
   return (
     <>
-      <h1 className="p-relative">Profile</h1>
-      <div className="profile-page m-20">
-        <div className="overview bg-white rad-10 d-flex align-center">
-          <div className="avatar-box txt-c p-20">
-            <img className="rad-half mb-10" src={images.avatar} alt="" />
-            <h3 className="m-0">{name}</h3>
-            <p className="c-grey mt-10">{level}</p>
-            <div className="level rad-6 bg-eee p-relative">
-              <span style={{ width: levelWidth }} />
+      <PageTitle>Profile</PageTitle>
+      <div className="m-[20px] max-md:mx-[10px]">
+        <div className="flex items-center rounded-[10px] bg-white max-md:flex-col">
+          <div className="w-[300px] p-[20px] text-center md:border-r md:border-[#eee]">
+            <img className="mb-[10px] h-[120px] w-[120px] rounded-full" src={images.avatar} alt="" />
+            <h3 className="mt-0 mb-0 text-[1.17em] font-bold">{name}</h3>
+            <p className="mt-[10px] mb-0 text-[#888]">{level}</p>
+            <div className="relative mx-auto my-0 h-[6px] w-[70%] overflow-hidden rounded-[6px] bg-[#eee]">
+              <span className="absolute left-0 top-0 h-full rounded-[6px] bg-[#0075ff]" style={{ width: levelWidth }} />
             </div>
-            <div className="rating mt-10 mb-10">
+            <div className="my-[10px]">
               {rating.map((r) => (
-                <i className="fa-solid fa-star c-orange fs-13" key={r} />
+                <FaStar aria-hidden key={r} className="inline text-[13px] text-[#f59e0b]" />
               ))}
             </div>
-            <p className="c-grey m-0 fs-13">{ratingText}</p>
+            <p className="mt-0 mb-0 text-[13px] text-[#888]">{ratingText}</p>
           </div>
-          <div className="info-box w-full txt-c-mobile">
+          <div className="w-full max-md:text-center">
             {infoBoxes.map((box) => (
-              <div className="box p-20 d-flex align-center" key={box.title}>
-                <h4 className="c-grey fs-15 m-0 w-full">{box.title}</h4>
+              <div
+                key={box.title}
+                className="flex flex-wrap items-center p-[20px] transition-colors duration-300 hover:bg-[#f9f9f9] [&:not(:last-child)]:border-b [&:not(:last-child)]:border-[#eee]"
+              >
+                <h4 className="mt-0 mb-0 w-full text-[15px] font-normal text-[#888]">{box.title}</h4>
                 {box.rows.map(([label, value]) => (
-                  <div className="fs-14" key={label}>
-                    <span className="c-grey">{label}</span> {value}
+                  <div key={label} className="min-w-[250px] pt-[10px] text-[14px]">
+                    <span className="text-[#888]">{label}</span> {value}
                   </div>
                 ))}
-                <div className="fs-14">
-                  <label>
-                    <input className="toggle-checkbox" type="checkbox" defaultChecked={box.toggle.checked} />
-                    <div className="toggle-switch" />
-                  </label>
+                <div className="min-w-[250px] pt-[10px] text-[14px]">
+                  <Toggle defaultChecked={box.toggle.checked} small />
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="other-data d-flex gap-20">
-          <div className="skills-card p-20 bg-white rad-10 mt-20">
-            <h2 className="mt-0 mb-10">My Skills</h2>
-            <p className="mt-0 mb-20 c-grey fs-15">Complete Skills List</p>
-            <ul className="m-0 txt-c-mobile">
+        <div className="mt-[20px] flex gap-[20px] max-md:flex-col">
+          <div className="flex-grow rounded-[10px] bg-white p-[20px]">
+            <h2 className="mt-0 mb-[10px] text-[1.5em] font-bold">My Skills</h2>
+            <p className="mt-0 mb-[20px] text-[15px] text-[#888]">Complete Skills List</p>
+            <ul className="m-0 list-none p-0 max-md:text-center">
               {skills.map((row) => (
-                <li key={row.join()}>
+                <li key={row.join()} className="py-[15px] [&:not(:last-child)]:border-b [&:not(:last-child)]:border-[#eee]">
                   {row.map((skill) => (
-                    <span key={skill}>{skill}</span>
+                    <span
+                      key={skill}
+                      className="mr-[5px] inline-flex rounded-[6px] bg-[#eee] px-[10px] py-[4px] text-[14px] [&:not(:last-child)]:mr-[5px]"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="activities p-20 bg-white rad-10 mt-20">
-            <h2 className="mt-0 mb-10">Latest Activities</h2>
-            <p className="mt-0 mb-20 c-grey fs-15">Latest Activities Done By The User</p>
+          <div className="flex-grow-[2] rounded-[10px] bg-white p-[20px]">
+            <h2 className="mt-0 mb-[10px] text-[1.5em] font-bold">Latest Activities</h2>
+            <p className="mt-0 mb-[20px] text-[15px] text-[#888]">Latest Activities Done By The User</p>
             {activities.map((a) => (
-              <div className="activity d-flex align-center txt-c-mobile" key={a.title}>
-                <img src={a.img} alt="" />
-                <div className="info">
-                  <span className="d-block mb-10">{a.title}</span>
-                  <span className="c-grey">{a.desc}</span>
+              <div
+                key={a.title}
+                className="flex items-center max-md:flex-col [&:not(:last-of-type)]:mb-[20px] [&:not(:last-of-type)]:border-b [&:not(:last-of-type)]:border-[#eee] [&:not(:last-of-type)]:pb-[20px]"
+              >
+                <img className="mr-[10px] h-[64px] w-[64px] max-md:mb-[15px] max-md:mr-0" src={a.img} alt="" />
+                <div className="max-md:text-center">
+                  <span className="mb-[10px] block">{a.title}</span>
+                  <span className="text-[#888]">{a.desc}</span>
                 </div>
-                <div className="date">
-                  <span className="d-block mb-10">{a.time}</span>
-                  <span className="c-grey">{a.when}</span>
+                <div className="ml-auto text-right max-md:mt-[15px] max-md:ml-0 max-md:text-center">
+                  <span className="mb-[10px] block">{a.time}</span>
+                  <span className="text-[#888]">{a.when}</span>
                 </div>
               </div>
             ))}

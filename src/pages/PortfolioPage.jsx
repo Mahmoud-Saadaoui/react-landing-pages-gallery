@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import "../components/Portfolio/css/portfolio.css";
 import Navbar from "../components/Portfolio/Navbar";
 import Section1 from "../components/Portfolio/Section1";
 import Section2 from "../components/Portfolio/Section2";

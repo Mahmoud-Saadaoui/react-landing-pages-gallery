@@ -21,14 +21,12 @@ const NiceScroll = () => {
   }, []);
 
   return (
-    <div className="nice-scrollbar">
+    <div className="pointer-events-none fixed right-0 top-0 z-[9999] h-full w-[10px]">
       <div
-        className="thumb"
+        className="absolute right-0 box-border w-[10px] border border-[#f7600e] bg-[#f7600e] opacity-90"
         style={{
           top: `${thumb.top}px`,
           height: `${thumb.height}px`,
-          border: "1px solid #f7600e",
-          boxSizing: "border-box",
         }}
       />
     </div>

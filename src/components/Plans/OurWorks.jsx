@@ -3,11 +3,11 @@ import { works } from "./data";
 const OurWorks = () => (
   <div className="our-works">
     {works.map((image) => (
-      <div className="image float-left" key={image}>
-        <img className="responsive-image" src={image} alt="" loading="lazy" />
+      <div className="float-left w-full md:w-1/2 lg:w-1/3 xl:w-1/4" key={image}>
+        <img className="w-full" src={image} alt="" loading="lazy" />
       </div>
     ))}
-    <div className="clearfix"></div>
+    <div className="clear-both"></div>
   </div>
 );
 

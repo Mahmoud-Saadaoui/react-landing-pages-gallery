@@ -1,42 +1,55 @@
+import {
+  FaPhone,
+  FaRegEnvelope,
+  FaRegFaceSmile,
+  FaCodeCommit,
+  FaRegNewspaper,
+} from "react-icons/fa6";
 import { friendsData } from "./data";
+import PageTitle from "./PageTitle";
 
 const Friends = () => (
   <>
-    <h1 className="p-relative">Friends</h1>
-    <div className="friends-page d-grid m-20 gap-20">
+    <PageTitle>Friends</PageTitle>
+    <div className="m-[20px] grid gap-[20px] [grid-template-columns:repeat(auto-fill,minmax(300px,1fr))] max-md:mx-[10px] max-md:gap-[10px] max-md:[grid-template-columns:minmax(200px,1fr)]">
       {friendsData.map((f) => (
-        <div className="friend bg-white rad-6 p-20 p-relative" key={f.name}>
-          <div className="contact">
-            <i className="fa-solid fa-phone" />
-            <i className="fa-regular fa-envelope" />
+        <div key={f.name} className="relative rounded-[6px] bg-white p-[20px]">
+          <div className="absolute left-[10px] top-[10px] flex gap-[4px]">
+            <i className="flex h-[33px] w-[33px] cursor-pointer items-center justify-center rounded-full bg-[#eee] text-[13px] text-[#666] transition-colors duration-300 hover:bg-[#0075ff] hover:text-white">
+              <FaPhone aria-hidden />
+            </i>
+            <i className="flex h-[33px] w-[33px] cursor-pointer items-center justify-center rounded-full bg-[#eee] text-[13px] text-[#666] transition-colors duration-300 hover:bg-[#0075ff] hover:text-white">
+              <FaRegEnvelope aria-hidden />
+            </i>
           </div>
-          <div className="txt-c">
-            <img className="rad-half mt-10 mb-10 w-100 h-100" src={f.img} alt="" />
-            <h4 className="m-0">{f.name}</h4>
-            <p className="c-grey fs-13 mt-5 mb-0">{f.job}</p>
+          <div className="text-center">
+            <img className="mx-auto mt-[10px] mb-[10px] block h-[100px] w-[100px] rounded-full" src={f.img} alt="" />
+            <h4 className="mt-0 mb-0 text-[1em] font-bold">{f.name}</h4>
+            <p className="mt-[5px] mb-0 text-[13px] text-[#888]">{f.job}</p>
           </div>
-          <div className="icons fs-14 p-relative">
-            <div className="mb-10">
-              <i className="fa-regular fa-face-smile fa-fw" />
-              <span>{f.friends} Friend</span>
+          <div className="relative my-[15px] border-y border-[#eee] py-[15px] text-[14px]">
+            <div className="mb-[10px]">
+              <FaRegFaceSmile aria-hidden /> <span>{f.friends} Friend</span>
             </div>
-            <div className="mb-10">
-              <i className="fa-solid fa-code-commit fa-fw" />
-              <span>{f.projects} Projects</span>
+            <div className="mb-[10px]">
+              <FaCodeCommit aria-hidden /> <span>{f.projects} Projects</span>
             </div>
             <div>
-              <i className="fa-regular fa-newspaper fa-fw" />
-              <span>{f.articles} Articles</span>
+              <FaRegNewspaper aria-hidden /> <span>{f.articles} Articles</span>
             </div>
-            {f.vip && <span className="vip fw-bold c-orange">VIP</span>}
+            {f.vip && (
+              <span className="absolute right-0 top-1/2 -translate-y-1/2 text-[40px] font-bold text-[#f59e0b] opacity-20">
+                VIP
+              </span>
+            )}
           </div>
-          <div className="info between-flex fs-13">
-            <span className="c-grey">Joined {f.joined}</span>
+          <div className="flex items-center justify-between text-[13px]">
+            <span className="text-[#888]">Joined {f.joined}</span>
             <div>
-              <a className="bg-blue c-white btn-shape" href="#">
+              <a className="rounded-[6px] bg-[#0075ff] px-[10px] py-[4px] text-white" href="#">
                 Profile
               </a>
-              <a className="bg-red c-white btn-shape" href="#">
+              <a className="rounded-[6px] bg-[#f44336] px-[10px] py-[4px] text-white" href="#">
                 Remove
               </a>
             </div>

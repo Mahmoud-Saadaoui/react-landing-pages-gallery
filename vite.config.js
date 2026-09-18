@@ -2,12 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { visualizer } from 'rollup-plugin-visualizer'
-import landingCssScope from './scripts/landing-css-scope.js'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins: [
-    landingCssScope(),
     react(),
     tailwindcss(),
     mode === 'analyze' &&

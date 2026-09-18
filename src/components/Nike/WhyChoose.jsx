@@ -1,23 +1,28 @@
 import { RiAddLine } from "react-icons/ri";
-import { whyImg, whyParagraphs } from "./data";
+import { whyImg, whyParagraphs, btnArrow } from "./data";
 
 export const WhyChoose = () => (
-  <section className="section__container why__container">
-    <div className="why__image">
-      <img src={whyImg} alt="why image" loading="lazy" />
+  <section className="mx-auto max-w-[1200px] px-[16px] py-[80px] grid gap-[32px] min-[769px]:grid-cols-2 min-[769px]:items-center">
+    <div>
+      <img
+        src={whyImg}
+        alt="why image"
+        loading="lazy"
+        className="w-full max-w-[450px] mx-auto"
+      />
     </div>
-    <div className="why__content">
-      <h2 className="section__header">
+    <div>
+      <h2 className="mb-[16px] text-[40px] font-bold text-[#333333]">
         Why Choose
         <br />
-        <span>Nike</span>
+        <span className="text-[48px] text-[#fc6601]">Nike</span>
       </h2>
       {whyParagraphs.map((paragraph) => (
-        <p className="section__description" key={paragraph.slice(0, 24)}>
+        <p className="mb-[32px] text-[#767368]" key={paragraph.slice(0, 24)}>
           {paragraph}
         </p>
       ))}
-      <button className="btn">
+      <button className={btnArrow}>
         <span>
           <RiAddLine />
         </span>{" "}

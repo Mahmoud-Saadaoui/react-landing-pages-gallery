@@ -11,8 +11,8 @@ const FeatureItem = ({ item }) => (
 );
 
 const Features = () => (
-  <section id="features" className="bg-gray-50 pt-12 dark:bg-darkBlue1">
-    <div className="container mx-auto px-6 pb-32">
+  <section id="features" className="bg-[#f9fafb] pt-12 [.dark_&]:bg-[hsl(218_28%_13%)]">
+    <div className="mx-auto w-full px-6 pb-32 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
       <div className="flex flex-col space-y-24 text-center md:flex-row md:space-y-0">
         {features.slice(0, 2).map((item) => (
           <FeatureItem key={item.title + item.icon} item={item} />

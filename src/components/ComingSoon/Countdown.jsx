@@ -10,14 +10,19 @@ const Countdown = () => {
   const values = [days, hours, minutes, seconds];
 
   return (
-    <div className="is-countdown countdown-rtl countdown-show4">
-      <div className="countdown-row countdown-show4">
+    <div className="border border-[#ccc] bg-[#eee]">
+      <div className="clear-both w-full px-[2px] text-center">
         {values.map((value, index) => (
-          <div className="countdown-section" key={countdownLabels[index]}>
-            <span className="countdown-amount">
+          <div
+            className="float-left mx-[20px] inline-block w-[24.5%] text-center text-[75%]"
+            key={countdownLabels[index]}
+          >
+            <span className="block text-[60px] font-bold text-[#ffce00] max-[768px]:text-[40px]">
               {toArabicDigits(value)}
             </span>
-            <span className="countdown-period">{countdownLabels[index]}</span>
+            <span className="block text-[30px] font-bold text-white max-[768px]:text-[20px]">
+              {countdownLabels[index]}
+            </span>
           </div>
         ))}
       </div>

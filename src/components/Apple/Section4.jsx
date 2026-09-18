@@ -2,6 +2,13 @@ import { useState } from "react";
 import { FaAngleDown, FaAngleLeft, FaAngleRight, FaAngleUp } from "react-icons/fa";
 import { watchBands, watchCases } from "./data";
 
+const controlPositions = {
+  top: "top-[22vh] left-1/2 -translate-x-1/2",
+  right: "top-1/2 right-[2rem] -translate-y-1/2",
+  bottom: "left-1/2 bottom-[20vh] -translate-x-1/2",
+  left: "top-1/2 left-[2rem] -translate-y-1/2",
+};
+
 const Section4 = () => {
   const [axisX, setAxisX] = useState(0);
   const [axisY, setAxisY] = useState(0);
@@ -23,28 +30,36 @@ const Section4 = () => {
   const control = (name, Icon, label) => (
     <a
       href="#"
-      className={`watch-control watch-${name}-control center${hide[name] ? " hideControl" : ""}`}
+      className={`absolute flex h-[4rem] w-[4rem] items-center justify-center rounded-[5rem] bg-[rgba(221,221,221,0.4)] ${controlPositions[name]}${
+        hide[name] ? " invisible opacity-0" : ""
+      }`}
       onClick={(e) => {
         e.preventDefault();
         move(name);
       }}
       aria-label={label}
     >
-      <Icon />
+      <Icon className="text-[3rem] text-[#6edae6]" />
     </a>
   );
 
   return (
-    <section className="section-4 center" id="section-4">
-      <div className="watches center">
-        <div className="watch-bands center" style={{ marginRight: `${axisX}rem` }}>
+    <section className="relative flex h-[140vh] flex-col items-center justify-center px-0 py-[20vh]" id="section-4">
+      <div className="relative flex h-full w-full items-center justify-center overflow-hidden">
+        <div
+          className="absolute flex items-center justify-center transition-[margin-right] duration-[1000ms]"
+          style={{ marginRight: `${axisX}rem` }}
+        >
           {watchBands.map((band) => (
-            <img src={band} className="watch-band-img" key={band} alt="" />
+            <img src={band} className="h-[35rem] w-[35rem] object-contain" key={band} alt="" />
           ))}
         </div>
-        <div className="watch-cases center" style={{ marginTop: `${axisY}rem` }}>
+        <div
+          className="absolute flex flex-col items-center justify-center transition-[margin-top] duration-[1000ms]"
+          style={{ marginTop: `${axisY}rem` }}
+        >
           {watchCases.map((c) => (
-            <img src={c} className="watch-case-img" key={c} alt="" />
+            <img src={c} className="h-[35rem] w-[35rem] object-contain" key={c} alt="" />
           ))}
         </div>
       </div>
@@ -52,7 +67,9 @@ const Section4 = () => {
       {control("right", FaAngleRight, "Move bands right")}
       {control("bottom", FaAngleDown, "Move bands down")}
       {control("left", FaAngleLeft, "Move bands left")}
-      <button className="watch-btn">Buy Now</button>
+      <button className="absolute bottom-[30vh] right-[35%] h-[5rem] w-[13rem] cursor-pointer rounded-[4rem] border-[0.1rem] border-dashed border-white bg-[#000] text-[1.6rem] font-extralight text-[#6edae6] max-[1100px]:right-[25%] max-[700px]:right-[15%] max-[450px]:right-[5%]">
+        Buy Now
+      </button>
     </section>
   );
 };

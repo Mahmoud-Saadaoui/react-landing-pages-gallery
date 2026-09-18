@@ -1,5 +1,3 @@
-import "../components/Kasper/css/kasper.css";
-import "../components/Kasper/css/all.min.css";
 import Header from "../components/Kasper/Header";
 import Landing from "../components/Kasper/Landing";
 import Services from "../components/Kasper/Services";

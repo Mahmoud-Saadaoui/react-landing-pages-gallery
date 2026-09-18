@@ -1,5 +1,3 @@
-import "../components/Classic/css/normalize.css";
-import "../components/Classic/css/style.css";
 import Header from "../components/Classic/Header";
 import Features from "../components/Classic/Features";
 import Subscribe from "../components/Classic/Subscribe";

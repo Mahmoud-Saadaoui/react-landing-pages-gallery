@@ -1,6 +1,3 @@
-import "../components/Mobile/css/animate.css";
-import "../components/Mobile/css/bootstrap.css";
-import "../components/Mobile/css/style.css";
 import Banner from "../components/Mobile/Banner";
 import Feature from "../components/Mobile/Feature";
 import Option from "../components/Mobile/Option";
@@ -12,7 +9,7 @@ import useWOW from "../components/Mobile/useWOW";
 const MobilePage = () => {
   useWOW();
   return (
-    <div className="mobile-page">
+    <div className="mobile-page overflow-x-hidden">
       <Banner />
       <Feature />
       <Option />

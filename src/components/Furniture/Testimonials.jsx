@@ -4,22 +4,24 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { testimonials } from "./data";
 
+const sectionHeader = "mb-4 text-[2.5rem] font-bold text-[#18181b]";
+
 export const Testimonials = () => (
-  <section className="section__container testimonial__container" id="testimonial">
-    <h2 className="section__header">Testimonials</h2>
-    <Swiper
-      className="swiper"
-      modules={[Pagination]}
-      loop
-      pagination={{}}
-    >
+  <section className="mx-auto w-full max-w-[1200px] px-4 py-20" id="testimonial">
+    <h2 className={`${sectionHeader} text-center`}>Testimonials</h2>
+    <Swiper className="mt-8 w-full pb-8" modules={[Pagination]} loop pagination={{}}>
       {testimonials.map((testimonial) => (
         <SwiperSlide key={testimonial.name}>
-          <div className="testimonial__card">
-            <p>{testimonial.quote}</p>
-            <img src={testimonial.image} alt="testimonial" loading="lazy" />
-            <h4>{testimonial.name}</h4>
-            <h5>{testimonial.role}</h5>
+          <div className="mx-auto max-w-[900px] p-4 text-center">
+            <p className="mb-4 text-[1.1rem] text-[#18181b]">{testimonial.quote}</p>
+            <img
+              src={testimonial.image}
+              alt="testimonial"
+              loading="lazy"
+              className="mx-auto mb-4 w-full max-w-[60px] rounded-full shadow-[5px_5px_20px_rgba(0,0,0,0.2)]"
+            />
+            <h4 className="text-[1.2rem] font-semibold text-[#18181b]">{testimonial.name}</h4>
+            <h5 className="text-base font-medium text-[#71717a]">{testimonial.role}</h5>
           </div>
         </SwiperSlide>
       ))}

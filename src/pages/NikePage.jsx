@@ -1,4 +1,3 @@
-import "../components/Nike/styles.css";
 import { Header } from "../components/Nike/Header";
 import { Trending } from "../components/Nike/Trending";
 import { WhyChoose } from "../components/Nike/WhyChoose";

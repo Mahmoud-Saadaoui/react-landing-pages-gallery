@@ -1,10 +1,348 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Space Grotesk", "Cairo", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  /* Police unifiée (chargée via Google Fonts dans index.html) */
+  --font-sans: "Cairo", sans-serif;
+
+  /* Breakpoints alignés sur la grille Bootstrap (parité des landings) */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  /* Tokens d'animation (ex animate.css, utilisés par les landings au scroll) */
+  --animate-bounce-in: bounce-in 1s both;
+  --animate-fade-in-up: fade-in-up 1s both;
+  --animate-fade-in-down: fade-in-down 1s both;
+  --animate-zoom-in: zoom-in 1s both;
+  --animate-flip-in-y: flip-in-y 1s both;
+
+  /* Dashboard */
+  --animate-change-color: change-color 0.8s infinite alternate;
+  --animate-go-up: go-up 0.8s infinite;
+
+  @keyframes change-color {
+    from {
+      background-color: #0075ff;
+    }
+    to {
+      background-color: white;
+    }
+  }
+
+  @keyframes go-up {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes bounce-in {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 40px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -40px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes zoom-in {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes flip-in-y {
+    from {
+      transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    40% {
+      transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+      animation-timing-function: ease-in;
+    }
+    60% {
+      transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+      opacity: 1;
+    }
+    80% {
+      transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+    to {
+      transform: perspective(400px);
+    }
+  }
 }
 
-body {
-  font-family: var(--font-sans);
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+
+  /* --- Normes globales (complément au preflight Tailwind v4) --- */
+  hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+}
+
+/* --- Animations au scroll (pages migrées, ex. WOW.js) --- */
+.mobile-page .wow {
+  visibility: hidden;
+}
+.mobile-page .wow.played {
+  visibility: visible;
+}
+
+/* --- ComingSoon : désactive les animations sur mobile (comme le CSS d'origine) --- */
+@media (max-width: 768px) {
+  .coming-soon-page .animate-bounce-in,
+  .coming-soon-page .animate-fade-in-up,
+  .coming-soon-page .animate-fade-in-down,
+  .coming-soon-page .animate-zoom-in {
+    animation-name: none;
+  }
+}
+
+/* --- Échelles rem du root (62.5% → réductions selon chaque CSS d'origine) --- */
+html.portfolio-root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+@media (max-width: 500px) {
+  html.portfolio-root {
+    font-size: 55%;
+  }
+}
+@media (max-width: 450px) {
+  html.portfolio-root {
+    font-size: 45%;
+  }
+}
+
+/* ClassicCars */
+html.classic-cars-root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+@media (max-width: 600px) {
+  html.classic-cars-root {
+    font-size: 55.5%;
+  }
+}
+@media (max-width: 400px) {
+  html.classic-cars-root {
+    font-size: 40%;
+  }
+}
+
+/* WineHouse */
+html.wine-house-root {
+  font-size: 62.5%;
+}
+@media (max-width: 500px) {
+  html.wine-house-root {
+    font-size: 45%;
+  }
+}
+
+/* TheRoad */
+html.the-road-root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+@media (max-width: 500px) {
+  html.the-road-root {
+    font-size: 45%;
+  }
+}
+
+/* Apple */
+html.apple-root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+@media (max-width: 1500px) {
+  html.apple-root {
+    font-size: 45%;
+  }
+}
+@media (max-width: 1100px) {
+  html.apple-root {
+    font-size: 40%;
+  }
+}
+@media (max-width: 450px) {
+  html.apple-root {
+    font-size: 35%;
+  }
+}
+
+/* Architect */
+html.architect-root {
+  font-size: 62.5%;
+}
+@media (max-width: 500px) {
+  html.architect-root {
+    font-size: 45%;
+  }
+}
+
+/* --- Dashboard : scrollbar custom (règles brutes, .dashboard-page réel) --- */
+.dashboard-page ::-webkit-scrollbar {
+  width: 15px;
+}
+.dashboard-page ::-webkit-scrollbar-track {
+  background-color: white;
+}
+.dashboard-page ::-webkit-scrollbar-thumb {
+  background-color: #0075ff;
+}
+.dashboard-page ::-webkit-scrollbar-thumb:hover {
+  background-color: #0d69d5;
 }

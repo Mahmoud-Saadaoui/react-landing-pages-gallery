@@ -1,14 +1,39 @@
 import { images } from "./images";
+import {
+  FaRegChartBar,
+  FaGear,
+  FaRegUser,
+  FaDiagramProject,
+  FaGraduationCap,
+  FaRegCircleUser,
+  FaRegFile,
+  FaRegCreditCard,
+  FaDollarSign,
+  FaCode,
+  FaUser,
+  FaRegRectangleList,
+  FaSpinner,
+  FaRegCircleCheck,
+  FaRegRectangleXmark,
+  FaTwitter,
+  FaFacebookF,
+  FaYoutube,
+  FaLinkedin,
+  FaRegFilePdf,
+  FaRegImages,
+  FaRegFileWord,
+  FaFileCsv,
+} from "react-icons/fa6";
 
 export const sidebarNav = [
-  { label: "Dashboard", path: "/landing-pages/dashboard", icon: "fa-regular fa-chart-bar fa-fw", end: true },
-  { label: "Settings", path: "/landing-pages/dashboard/settings", icon: "fa-solid fa-gear fa-fw" },
-  { label: "Profile", path: "/landing-pages/dashboard/profile", icon: "fa-regular fa-user fa-fw" },
-  { label: "Projects", path: "/landing-pages/dashboard/projects", icon: "fa-solid fa-diagram-project fa-fw" },
-  { label: "Courses", path: "/landing-pages/dashboard/courses", icon: "fa-solid fa-graduation-cap fa-fw" },
-  { label: "Friends", path: "/landing-pages/dashboard/friends", icon: "fa-regular fa-circle-user fa-fw" },
-  { label: "Files", path: "/landing-pages/dashboard/files", icon: "fa-regular fa-file fa-fw" },
-  { label: "Plans", path: "/landing-pages/dashboard/plans", icon: "fa-regular fa-credit-card fa-fw" },
+  { label: "Dashboard", path: "/landing-pages/dashboard", icon: FaRegChartBar, end: true },
+  { label: "Settings", path: "/landing-pages/dashboard/settings", icon: FaGear },
+  { label: "Profile", path: "/landing-pages/dashboard/profile", icon: FaRegUser },
+  { label: "Projects", path: "/landing-pages/dashboard/projects", icon: FaDiagramProject },
+  { label: "Courses", path: "/landing-pages/dashboard/courses", icon: FaGraduationCap },
+  { label: "Friends", path: "/landing-pages/dashboard/friends", icon: FaRegCircleUser },
+  { label: "Files", path: "/landing-pages/dashboard/files", icon: FaRegFile },
+  { label: "Plans", path: "/landing-pages/dashboard/plans", icon: FaRegCreditCard },
 ];
 
 export const homeData = {
@@ -24,15 +49,15 @@ export const homeData = {
     ],
   },
   targets: [
-    { icon: "fa-solid fa-dollar-sign", color: "blue", name: "Money", value: "$20.000", percent: "80%" },
-    { icon: "fa-solid fa-code", color: "orange", name: "Projects", value: "24", percent: "55%" },
-    { icon: "fa-solid fa-user", color: "green", name: "Team", value: "12", percent: "75%" },
+    { icon: FaDollarSign, color: "blue", name: "Money", value: "$20.000", percent: "80%" },
+    { icon: FaCode, color: "orange", name: "Projects", value: "24", percent: "55%" },
+    { icon: FaUser, color: "green", name: "Team", value: "12", percent: "75%" },
   ],
   tickets: [
-    { icon: "fa-regular fa-rectangle-list", color: "c-orange", value: "2500", label: "Total" },
-    { icon: "fa-solid fa-spinner", color: "c-blue", value: "500", label: "Pending" },
-    { icon: "fa-regular fa-circle-check", color: "c-green", value: "1900", label: "Closed" },
-    { icon: "fa-regular fa-rectangle-xmark", color: "c-red", value: "100", label: "Deleted" },
+    { icon: FaRegRectangleList, color: "orange", value: "2500", label: "Total" },
+    { icon: FaSpinner, color: "blue", value: "500", label: "Pending" },
+    { icon: FaRegCircleCheck, color: "green", value: "1900", label: "Closed" },
+    { icon: FaRegRectangleXmark, color: "red", value: "100", label: "Deleted" },
   ],
   news: [
     { img: images.news01, title: "Created SASS Section", desc: "New SASS Examples & Tutorials", label: "3 Days Ago" },
@@ -85,10 +110,10 @@ export const homeData = {
     comments: "500",
   },
   social: [
-    { klass: "twitter", icon: "fa-brands fa-twitter", text: "90K Followers", action: "Follow" },
-    { klass: "facebook", icon: "fa-brands fa-facebook-f", text: "2M Like", action: "Like" },
-    { klass: "youtube", icon: "fa-brands fa-youtube", text: "1M Subs", action: "Subscribe" },
-    { klass: "linkedin", icon: "fa-brands fa-linkedin", text: "70K Followers", action: "Follow" },
+    { klass: "twitter", icon: FaTwitter, text: "90K Followers", action: "Follow" },
+    { klass: "facebook", icon: FaFacebookF, text: "2M Like", action: "Like" },
+    { klass: "youtube", icon: FaYoutube, text: "1M Subs", action: "Subscribe" },
+    { klass: "linkedin", icon: FaLinkedin, text: "70K Followers", action: "Follow" },
   ],
   projectsTable: [
     { name: "Ministry Wikipedia", date: "10 May 2022", client: "Ministry", price: "$5300", team: [images.team01, images.team02, images.team03, images.team05], status: "Pending", statusClass: "bg-orange" },
@@ -212,10 +237,10 @@ export const friendsData = [
 
 export const filesData = {
   stats: [
-    { icon: "fa-regular fa-file-pdf", color: "blue", name: "PDF Files", count: "130", size: "6.5GB" },
-    { icon: "fa-regular fa-images", color: "green", name: "Images", count: "115 Files", size: "3.5GB" },
-    { icon: "fa-regular fa-file-word", color: "red", name: "Word Files", count: "110 Files", size: "3.2GB" },
-    { icon: "fa-solid fa-file-csv", color: "orange", name: "CSV Files", count: "99 Files", size: "2.9GB" },
+    { icon: FaRegFilePdf, color: "blue", name: "PDF Files", count: "130", size: "6.5GB" },
+    { icon: FaRegImages, color: "green", name: "Images", count: "115 Files", size: "3.5GB" },
+    { icon: FaRegFileWord, color: "red", name: "Word Files", count: "110 Files", size: "3.2GB" },
+    { icon: FaFileCsv, color: "orange", name: "CSV Files", count: "99 Files", size: "2.9GB" },
   ],
   files: [
     [images.pdfSvg, "my-file.pdf", "Mahmoud", "20/06/2020", "5.5MB"],

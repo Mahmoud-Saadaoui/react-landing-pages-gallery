@@ -6,8 +6,6 @@ import Faq from "../components/Product/Faq";
 import VideoSection from "../components/Product/VideoSection";
 import Contact from "../components/Product/Contact";
 import Footer from "../components/Product/Footer";
-import "../components/Product/css/bootstrap.css";
-import "../components/Product/css/style.css";
 
 export default function ProductPage() {
   useEffect(() => {
@@ -15,7 +13,7 @@ export default function ProductPage() {
   }, []);
 
   return (
-    <div className="product-page">
+    <div className="product-page overflow-x-hidden">
       <Header />
       <Features />
       <Prices />

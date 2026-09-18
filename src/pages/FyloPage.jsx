@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "../components/Fylo/css/fylo.css";
 import Header from "../components/Fylo/Header";
 import Hero from "../components/Fylo/Hero";
 import Features from "../components/Fylo/Features";
@@ -23,9 +22,9 @@ const FyloPage = () => {
 
   return (
     <div className={dark ? "dark" : ""}>
-      <div className="font-opensans dark:bg-darkBlue dark:text-white">
+      <div className={dark ? "bg-[hsl(217_28%_15%)] text-white" : ""}>
         <Header dark={dark} onToggle={() => setDark((value) => !value)} />
-        <Hero />
+        <Hero dark={dark} />
         <Features />
         <Productive />
         <Testimonials />

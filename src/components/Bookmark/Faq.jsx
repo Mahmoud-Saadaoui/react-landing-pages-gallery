@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { faq } from "./data";
 
+const container =
+  "mx-auto w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]";
+
 const Arrow = ({ open }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="18"
     height="12"
-    className={`transition duration-500 ease ${open ? "-rotate-180 text-softRed" : ""}`}
+    className={`transition duration-500 ${open ? "-rotate-180 text-[#fa5757]" : ""}`}
   >
     <path
       fill="none"
@@ -23,19 +26,19 @@ const Faq = () => {
   return (
     <>
       <section id="faq">
-        <div className="container mx-auto">
+        <div className={container}>
           <h2 className="mb-6 text-center text-3xl font-semibold md:text-4xl">
             {faq.title}
           </h2>
-          <p className="mx-auto max-w-lg px-6 text-center text-graishBlue">
+          <p className="mx-auto max-w-lg px-6 text-center text-[#9194a1]">
             {faq.description}
           </p>
         </div>
       </section>
 
       <section id="faq-accordion">
-        <div className="container mx-auto mb-32 px-6">
-          <div className="mx-auto m-8 max-w-2xl overflow-hidden">
+        <div className={`${container} mb-32 px-6`}>
+          <div className="mx-auto my-8 max-w-2xl overflow-hidden">
             {faq.items.map((item, index) => {
               const open = openIndex === index;
               return (
@@ -50,7 +53,7 @@ const Faq = () => {
                     <Arrow open={open} />
                   </div>
                   <div
-                    className={`overflow-hidden transition duration-500 ease ${
+                    className={`overflow-hidden transition duration-500 ${
                       open ? "max-h-screen" : "max-h-0"
                     }`}
                   >
