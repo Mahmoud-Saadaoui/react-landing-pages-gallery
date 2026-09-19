@@ -17,6 +17,8 @@ import icon3 from "./images/icon3.png";
 import icon4 from "./images/icon4.png";
 import { larges, smalls } from "./gallery";
 import logo from "./images/logo.png";
+import bg from "./images/bg.webp";
+import bg2 from "./images/bg2.webp";
 
 export const navLinks = [
   { label: "خدمات الشركة", target: "services" },
@@ -27,10 +29,12 @@ export const navLinks = [
 
 export const slides = [
   {
+    image: bg,
     text: "وكالتنا متخصصة فى برمجة وتصميم المواقع الألكترونية وتطبيقات الموبايل",
     link: { label: "تصفح أعمالنا", target: "gallery" },
   },
   {
+    image: bg2,
     text: "مرحبا بك في موقع وكالتنا الرسمي لا تتردد في التواصل معنا واخبارنا رأيك",
     link: { label: "تواصل معنا", target: "contacts" },
   },

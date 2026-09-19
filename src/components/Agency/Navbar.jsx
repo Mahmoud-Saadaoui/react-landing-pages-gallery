@@ -21,47 +21,61 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const toggle = () => setOpen((o) => !o);
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-20 border-b transition-all duration-1000 ${
-        solid
-          ? "border-[#eee] bg-white"
-          : "border-transparent"
+      className={`fixed left-0 right-0 top-0 z-20 border-b transition-all duration-500 ${
+        solid ? "border-[#eee] bg-white" : "border-transparent"
       }`}
       id="navBar"
     >
-      <div className="mx-auto flex w-full max-w-full flex-row-reverse items-center px-[15px] md:max-w-[720px] md:flex-row lg:max-w-[960px] xl:max-w-[1140px]">
-        <button
-          className={`md:hidden ml-auto mr-0 flex items-center justify-center p-[.5rem] outline-none transition-all duration-1000`}
-          type="button"
-          aria-label="Toggle navigation"
-          onClick={() => setOpen((o) => !o)}
-        >
-          <span className={`flex items-center justify-center ${solid ? "text-[#16aeca]" : "text-white"}`}>
-            <FaBars aria-hidden="true" />
-          </span>
-        </button>
+      <div className="relative mx-auto flex min-h-[56px] w-full max-w-full items-center justify-between px-[15px] md:justify-start md:px-8 xl:max-w-[1140px]">
         <a
-          className="shrink-0 py-2.5"
+          className="flex shrink-0 items-center py-2"
           href="#gallery"
           onClick={(e) => {
             e.preventDefault();
+            setOpen(false);
             scrollTo("gallery");
           }}
         >
-          <img src={brand} alt="logo" className="w-[80%] transition-all duration-1000" />
+          <img src={brand} alt="logo" className="h-[44px] w-auto object-contain" />
         </a>
+
+        <button
+          className={`flex h-11 w-11 cursor-pointer items-center justify-center rounded-md text-[20px] outline-none transition-colors duration-500 md:hidden ${
+            solid ? "text-[#16aeca]" : "text-white"
+          }`}
+          type="button"
+          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={open}
+          onClick={toggle}
+        >
+          <FaBars aria-hidden="true" />
+        </button>
+
         <div
-          className={`${open ? "block" : "hidden"} md:flex md:flex-1 md:items-center ${
-            solid ? "max-md:bg-white" : "max-md:bg-[#16aeca]"
+          className={`${
+            open ? "block" : "hidden"
+          } absolute left-0 right-0 top-full border-t px-[15px] pb-2 pt-1 shadow-xl md:static md:flex md:flex-1 md:items-center md:border-0 md:px-0 md:pb-0 md:pt-0 md:shadow-none ${
+            solid
+              ? "max-md:border-[#eee] max-md:bg-white"
+              : "max-md:border-white/15 max-md:bg-[#16aeca]"
           }`}
           id="navbarSupportedContent"
         >
-          <ul className="m-0 flex list-none flex-col gap-0 p-0 md:flex-row md:items-center">
+          <ul
+            className={`m-0 flex w-full flex-col gap-0 p-0 md:w-auto md:flex-row md:items-center ${
+              solid
+                ? "max-md:divide-y max-md:divide-[#eee]"
+                : "max-md:divide-y max-md:divide-white/10"
+            }`}
+          >
             {navLinks.map(({ label, target }) => (
               <li key={target}>
                 <a
-                  className={`block whitespace-nowrap px-6 py-2.5 text-[16px] leading-[40px] transition-all duration-500 ${
+                  className={`block whitespace-nowrap px-6 py-2.5 text-[16px] leading-[40px] transition-all duration-500 max-md:px-5 max-md:py-3 max-md:text-center max-md:leading-none ${
                     solid
                       ? active === target
                         ? "bg-[#16aeca] text-[#dae413]"
@@ -69,7 +83,7 @@ const Navbar = () => {
                       : active === target
                       ? "bg-white text-[#16aeca]"
                       : "text-white hover:bg-white hover:text-[#16aeca]"
-                  } max-md:px-2`}
+                  }`}
                   href={`#${target}`}
                   onClick={(e) => {
                     e.preventDefault();

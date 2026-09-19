@@ -8,15 +8,21 @@ const Group = ({ items, offset, onPick }) => (
       <div className="col-sm w-full sm:grow sm:basis-0 sm:max-w-full" key={`${offset}-${i}`}>
         <a
           href={`#image-${offset + i + 1}`}
-          className="group relative inline-block w-full cursor-pointer"
+          className="group relative inline-block w-full cursor-pointer overflow-hidden"
           onClick={(e) => {
             e.preventDefault();
             onPick(offset + i);
           }}
         >
-          <img src={small} alt="gallery img" className="block w-full" />
-          <div className="absolute left-[5%] top-[5%] z-[9] flex h-[90%] w-[90%] items-center justify-center bg-[#16aeca]/90 text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-            <FaSearchPlus className="text-[2em]" aria-hidden="true" />
+          <img
+            src={small}
+            alt="gallery img"
+            className="block w-full transition-transform duration-500 ease-out group-hover:scale-[1.05]"
+          />
+          <div className="absolute inset-0 z-[9] flex items-center justify-center bg-[#16aeca]/0 transition-colors duration-500 group-hover:bg-[#0b3b46]/40">
+            <span className="flex h-[56px] w-[56px] scale-50 items-center justify-center rounded-full bg-white text-[#16aeca] opacity-0 transition-all duration-500 group-hover:scale-100 group-hover:opacity-100">
+              <FaSearchPlus className="text-[1.4em]" aria-hidden="true" />
+            </span>
           </div>
         </a>
       </div>

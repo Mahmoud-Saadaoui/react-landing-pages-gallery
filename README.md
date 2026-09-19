@@ -27,9 +27,7 @@ assembled in a single React app.
 - The **Dashboard** template is a multi-page app: one shared React sidebar layout with
   **8 sub‑routes** (`/landing-pages/dashboard/settings`, `/profile`, `/projects`, `/courses`,
   `/friends`, `/files`, `/plans`, and the index).
-- **Migration complete**: all 24 pages are pure Tailwind 4 — every legacy stylesheet
-  (`framework.css`, `master.css`, `bootstrap-slim.css`, `fontawesome.min.css`, …) has been
-  removed and only `src/index.css` remains.
+- **Migration complete**: all 24 pages are pure Tailwind 4.
 
 ## Features
 

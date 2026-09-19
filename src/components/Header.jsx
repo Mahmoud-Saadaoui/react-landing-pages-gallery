@@ -6,9 +6,17 @@ const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <header className="border-b border-gray-200 bg-white">
-      <div className="mx-auto max-w-6xl px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="text-lg font-bold text-gray-900">
+    <header className="relative overflow-hidden border-b border-[#A3E635]/20 bg-[#052E16]">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url(/home-page-bg.jpeg)" }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#081B08]/90 via-[#052E16]/85 to-[#052E16]/90" />
+      <div className="relative z-10 mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+        <Link
+          to="/"
+          className="text-lg font-bold tracking-tight text-[#D9F99D] transition-colors hover:text-[#A3E635]"
+        >
           {t("brand.name")}
         </Link>
         <nav className="flex items-center gap-2">
