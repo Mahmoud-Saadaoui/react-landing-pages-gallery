@@ -6,6 +6,7 @@ const About = () => (
     <div className="mx-auto px-[15px] md:w-[750px] lg:w-[970px] xl:w-[1170px]">
       <MainHeading title="About Us" />
       <img
+        data-reveal
         src={about}
         alt=""
         loading="lazy"

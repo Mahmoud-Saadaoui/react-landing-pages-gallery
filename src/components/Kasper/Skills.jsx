@@ -11,6 +11,8 @@ const Skills = () => (
         </p>
         {testimonials.map((item, index) => (
           <div
+            data-reveal
+            style={{ transitionDelay: `${index * 100}ms` }}
             className="content mb-[30px] flex items-center max-[767px]:flex-col max-[767px]:text-center"
             key={index}
           >
@@ -34,7 +36,7 @@ const Skills = () => (
           <li className="mr-[10px] h-[14px] w-[14px] rounded-full border border-[#aaa]"></li>
         </ul>
       </div>
-      <div className="skills lg:basis-[45%]">
+      <div data-reveal className="skills lg:basis-[45%]">
         <h3 className="mb-[30px] text-center font-normal uppercase">Skills</h3>
         <p className="mb-[60px] text-center leading-[2] text-[#777]">
           Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.

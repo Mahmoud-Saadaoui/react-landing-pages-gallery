@@ -12,10 +12,13 @@ import Pricing from "../components/Kasper/Pricing";
 import Subscribe from "../components/Kasper/Subscribe";
 import Contact from "../components/Kasper/Contact";
 import Footer from "../components/Kasper/Footer";
+import useReveal from "../hooks/useReveal";
 
-const KasperPage = () => (
-  <>
-    <Header />
+const KasperPage = () => {
+  useReveal(".kasper-page");
+  return (
+    <div className="kasper-page">
+      <Header />
     <Landing />
     <Services />
     <Design />
@@ -28,8 +31,9 @@ const KasperPage = () => (
     <Pricing />
     <Subscribe />
     <Contact />
-    <Footer />
-  </>
-);
+      <Footer />
+    </div>
+  );
+};
 
 export default KasperPage;

@@ -7,7 +7,10 @@ const Footer = () => (
     className="relative bg-cover py-[50px] text-center text-white before:absolute before:inset-0 before:bg-[rgba(0,0,0,.7)]"
     style={{ backgroundImage: `url(${subscribeBg})` }}
   >
-    <div className="relative mx-auto px-[15px] md:w-[750px] lg:w-[970px] xl:w-[1170px]">
+    <div
+      data-reveal
+      className="relative mx-auto px-[15px] md:w-[750px] lg:w-[970px] xl:w-[1170px]"
+    >
       <img src={logo} alt="Logo" className="mb-[20px]" />
       <p className="mx-auto my-[20px] w-fit border-b border-white p-[20px] text-[22px] uppercase">
         We Are Social

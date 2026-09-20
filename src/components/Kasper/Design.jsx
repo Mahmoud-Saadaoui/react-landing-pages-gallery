@@ -10,13 +10,17 @@ const Design = () => (
   >
     <div className="relative z-[2] flex-1 text-center max-[767px]:hidden">
       <img
+        data-reveal
         src={mobile}
         alt="Mobile"
         loading="lazy"
         className="relative -bottom-[150px]"
       />
     </div>
-    <div className="relative z-[2] flex-1 bg-[rgba(15,116,143,.7)] p-[50px] text-white">
+    <div
+      data-reveal
+      className="relative z-[2] flex-1 bg-[rgba(15,116,143,.7)] p-[50px] text-white"
+    >
       <h2 className="mb-[40px] font-normal uppercase">Our Design Comes With...</h2>
       <ul>
         {designFeatures.map((feature) => (

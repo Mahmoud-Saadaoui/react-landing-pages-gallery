@@ -6,7 +6,10 @@ const Subscribe = () => (
     className="relative bg-cover py-[100px] text-white before:absolute before:inset-0 before:bg-[rgba(0,0,0,.5)]"
     style={{ backgroundImage: `url(${subscribeBg})` }}
   >
-    <div className="relative mx-auto flex items-center px-[15px] md:w-[750px] lg:w-[970px] xl:w-[1170px] max-[991px]:flex-col">
+    <div
+      data-reveal
+      className="relative mx-auto flex items-center px-[15px] md:w-[750px] lg:w-[970px] xl:w-[1170px] max-[991px]:flex-col"
+    >
       <form
         onSubmit={(e) => e.preventDefault()}
         className="relative flex w-[500px] max-w-full"

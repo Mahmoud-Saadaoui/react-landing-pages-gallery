@@ -4,7 +4,10 @@ const Contact = () => (
   <div className="py-[100px]">
     <div className="mx-auto px-[15px] md:w-[750px] lg:w-[970px] xl:w-[1170px]">
       <MainHeading title="Contact Us" />
-      <div className="flex justify-between max-[767px]:flex-col">
+      <div
+        data-reveal
+        className="flex justify-between max-[767px]:flex-col"
+      >
         <form onSubmit={(e) => e.preventDefault()} className="basis-[70%]">
           <input
             className="main-input mb-[30px] block w-full border border-[#ccc] p-[20px] focus:outline-none"

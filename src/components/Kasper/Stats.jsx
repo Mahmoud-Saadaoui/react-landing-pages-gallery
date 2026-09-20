@@ -7,8 +7,10 @@ const Stats = () => (
     style={{ backgroundImage: `url(${statsBg})` }}
   >
     <div className="relative mx-auto flex flex-wrap px-[15px] md:w-[750px] lg:w-[970px] xl:w-[1170px]">
-      {stats.map((item) => (
+      {stats.map((item, index) => (
         <div
+          data-reveal
+          style={{ transitionDelay: `${index * 100}ms` }}
           className="bg-[rgba(15,116,143,.7)] p-[50px] text-white max-[767px]:basis-full md:basis-1/2 lg:basis-1/4"
           key={item.label}
         >

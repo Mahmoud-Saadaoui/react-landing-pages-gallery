@@ -8,6 +8,8 @@ const Services = () => (
       <div className="md:grid md:grid-cols-[repeat(auto-fill,minmax(450px,1fr))] md:gap-x-[40px] md:gap-y-[60px]">
         {services.map((srv, index) => (
           <div
+            data-reveal
+            style={{ transitionDelay: `${index * 100}ms` }}
             className="flex max-[767px]:mb-[40px] max-[767px]:flex-col max-[767px]:text-center"
             key={index}
           >

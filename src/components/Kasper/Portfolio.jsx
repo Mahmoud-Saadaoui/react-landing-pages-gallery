@@ -5,7 +5,7 @@ const Portfolio = () => (
   <div className="py-[100px]">
     <div className="mx-auto px-[15px] md:w-[750px] lg:w-[970px] xl:w-[1170px]">
       <MainHeading title="Portfolio" />
-      <ul className="flex justify-center">
+      <ul data-reveal className="flex justify-center">
         {shuffle.map((item, index) => (
           <li
             key={item}
@@ -17,8 +17,10 @@ const Portfolio = () => (
       </ul>
     </div>
     <div className="mt-[60px] flex flex-wrap">
-      {portfolioImages.map((image) => (
+      {portfolioImages.map((image, index) => (
         <div
+          data-reveal
+          style={{ transitionDelay: `${(index % 8) * 70}ms` }}
           className="group relative overflow-hidden md:basis-1/2 min-[1199px]:basis-[25%]"
           key={image}
         >
