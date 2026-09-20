@@ -6,9 +6,12 @@ import Portfolio from "../components/Leon/Portfolio";
 import About from "../components/Leon/About";
 import Contact from "../components/Leon/Contact";
 import Footer from "../components/Leon/Footer";
+import useReveal from "../hooks/useReveal";
 
-const LeonPage = () => (
-  <div className="scroll-smooth">
+const LeonPage = () => {
+  useReveal(".leon-page");
+  return (
+  <div className="leon-page scroll-smooth">
     <Header />
     <Hero />
     <Features />
@@ -18,6 +21,7 @@ const LeonPage = () => (
     <Contact />
     <Footer />
   </div>
-);
+  );
+};
 
 export default LeonPage;
