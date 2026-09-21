@@ -2,7 +2,7 @@ import { footerIcons } from "./data";
 
 const Section6 = () => (
   <section className="relative flex h-[40vh] w-full items-center justify-center">
-    <div>
+    <div className="flex flex-wrap items-center justify-center max-[700px]:gap-0 gap-[4rem]">
       {footerIcons.map(({ href, img, label }) => (
         <a href={href} className="mx-[5rem] max-[700px]:mx-[2rem]" key={label}>
           <img src={img} className="w-[10rem] max-[550px]:w-[8rem] max-[450px]:w-[6rem]" alt={label} />

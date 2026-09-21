@@ -23,7 +23,7 @@ const Section3 = () => {
 
   return (
     <section
-      className="flex h-full w-full flex-col items-center justify-center bg-[#000] px-0 py-[15rem] [clip-path:polygon(68%_0,100%_0,100%_97%,38%_100%,0_100%,0_3%)]"
+      className="flex min-h-screen w-full flex-col items-center justify-center bg-[#000] px-0 py-[15rem] [clip-path:polygon(68%_0,100%_0,100%_97%,38%_100%,0_100%,0_3%)] max-[700px]:px-[2rem] max-[700px]:py-[8rem]"
       id="section-3"
     >
       <h1 className="mb-[15rem] text-[10rem] font-extralight text-[#6edae6] max-[550px]:text-[8rem] max-[450px]:text-[6rem]">
@@ -35,7 +35,7 @@ const Section3 = () => {
       >
         <img
           src={screen}
-          className={`w-full origin-bottom ${
+          className={`w-full origin-bottom max-[700px]:[transform:rotateX(0)] ${
             changed
               ? "[transform:rotateX(0)] transition-transform duration-[3000ms]"
               : "[transform:rotateX(-80deg)]"
@@ -44,7 +44,7 @@ const Section3 = () => {
         />
         <img src={keyboard} className="w-full" alt="" />
         <div
-          className={`absolute top-[6%] left-0 h-[85%] w-[60%] bg-center bg-no-repeat max-[900px]:w-[70%] ${
+          className={`absolute top-[5.5%] left-[13%] h-[81%] w-[73.5%] bg-cover bg-center bg-no-repeat ${
             changed
               ? "opacity-100 transition-opacity duration-[1000ms] delay-[2000ms]"
               : "opacity-0"
@@ -76,13 +76,13 @@ const Section3 = () => {
           </div>
         </div>
         <div
-          className={`absolute w-[70rem] text-center max-[450px]:w-[40rem] ${
+          className={`absolute w-[70rem] text-center max-[700px]:w-[50rem] max-[450px]:w-[40rem] ${
             changed
               ? "opacity-100 transition-opacity duration-[1000ms] delay-[6000ms]"
               : "opacity-0"
           }`}
         >
-          <h2 className="text-[6rem] text-[#6edae6] max-[550px]:text-[5rem] max-[450px]:text-[3rem]">
+          <h2 className="text-[6rem] text-[#6edae6] max-[550px]:text-[5rem] max-[450px]:text-[3.5rem]">
             Light. Speed.
           </h2>
           <p className="my-[3rem] text-[2.5rem] font-extralight max-[450px]:text-[2rem] max-[450px]:font-light">

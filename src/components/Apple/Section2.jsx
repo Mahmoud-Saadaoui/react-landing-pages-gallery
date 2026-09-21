@@ -19,24 +19,24 @@ const Section2 = () => (
         alt=""
       />
     </div>
-    <div className="flex">
+    <div className="flex max-[700px]:flex-col max-[700px]:items-center max-[700px]:gap-[4rem]">
       <a
         href="#"
-        className="group relative mx-[3rem] flex h-[6rem] w-[6rem] items-center justify-center rounded-full bg-[linear-gradient(to_right,#333_60%,#525252)]"
+        className="group relative mx-[5rem] flex h-[7rem] w-[7rem] items-center justify-center rounded-full bg-[linear-gradient(to_right,#333_60%,#525252)] transition-transform duration-300 hover:scale-110 max-[700px]:mx-0"
         onClick={(e) => e.preventDefault()}
       >
         <span className="block h-[50%] w-[50%] rounded-[1rem] border-[0.1rem] border-solid border-[#6edae6]" />
-        <span className="absolute top-[-3rem] w-max text-[1.6rem] uppercase tracking-[0.1rem] text-[#6edae6] [transform:scale(0)] transition-transform duration-500 group-hover:[transform:scale(1)]">
+        <span className="absolute top-[calc(100%+1.5rem)] left-1/2 w-max -translate-x-1/2 text-[1.5rem] uppercase tracking-[0.1rem] text-[#6edae6]">
           Learn More
         </span>
       </a>
       <a
         href="#"
-        className="group relative mx-[3rem] flex h-[6rem] w-[6rem] items-center justify-center rounded-full bg-[linear-gradient(to_right,#333_60%,#525252)]"
+        className="group relative mx-[5rem] flex h-[7rem] w-[7rem] items-center justify-center rounded-full bg-[linear-gradient(to_right,#333_60%,#525252)] transition-transform duration-300 hover:scale-110 max-[700px]:mx-0"
         onClick={(e) => e.preventDefault()}
       >
         <span className="block h-[50%] w-[50%] rounded-[1rem] border-[0.1rem] border-solid border-[#6edae6]" />
-        <span className="absolute top-[-3rem] w-max text-[1.6rem] uppercase tracking-[0.1rem] text-[#6edae6] [transform:scale(0)] transition-transform duration-500 group-hover:[transform:scale(1)]">
+        <span className="absolute top-[calc(100%+1.5rem)] left-1/2 w-max -translate-x-1/2 text-[1.5rem] uppercase tracking-[0.1rem] text-[#6edae6]">
           Shop
         </span>
       </a>

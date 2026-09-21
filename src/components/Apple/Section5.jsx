@@ -4,7 +4,7 @@ import airpods2 from "./images/AirPods/airpods-2.png";
 const Section5 = () => (
   <section className="flex h-screen w-full items-center justify-center" id="section-5">
     <div className="relative flex h-[80%] w-[90%]">
-      <h1 className="absolute top-0 left-1/2 -translate-x-1/2 text-[15rem] font-light whitespace-nowrap text-white [text-shadow:0.1rem_0.1rem_0_#999] max-[900px]:text-[12rem]">
+      <h1 className="absolute top-0 left-1/2 -translate-x-1/2 text-[15rem] font-light whitespace-nowrap text-white [text-shadow:0.1rem_0.1rem_0_#999] max-[900px]:text-[12rem] max-[700px]:text-[#0b2e30] max-[700px]:[text-shadow:none]">
         AirPods
       </h1>
       <img src={airpods1} className="h-full w-[50%] object-contain max-[700px]:hidden" alt="" />

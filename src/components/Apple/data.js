@@ -39,8 +39,8 @@ export const slideshowBgs = Object.entries(slideMap)
 export const navLinks = [
   { label: "iPhone 12", href: "#section-2" },
   { label: "MacBook Air", href: "#section-3" },
-  { label: "Watch", href: "#section-3" },
-  { label: "AirPods", href: "#section-4" },
+  { label: "Watch", href: "#section-4" },
+  { label: "AirPods", href: "#section-5" },
 ];
 
 export const footerIcons = [

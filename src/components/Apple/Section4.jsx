@@ -21,25 +21,25 @@ const Section4 = () => {
   };
 
   const move = (dir) => {
-    if (dir === "top") setAxisY((v) => v - 70);
-    if (dir === "bottom") setAxisY((v) => v + 70);
-    if (dir === "right") setAxisX((v) => v + 70);
-    if (dir === "left") setAxisX((v) => v - 70);
+    if (dir === "top") setAxisY((v) => Math.max(-280, Math.min(280, v - 70)));
+    if (dir === "bottom") setAxisY((v) => Math.max(-280, Math.min(280, v + 70)));
+    if (dir === "right") setAxisX((v) => Math.max(-280, Math.min(280, v + 70)));
+    if (dir === "left") setAxisX((v) => Math.max(-280, Math.min(280, v - 70)));
   };
 
   const control = (name, Icon, label) => (
     <a
       href="#"
-      className={`absolute flex h-[4rem] w-[4rem] items-center justify-center rounded-[5rem] bg-[rgba(221,221,221,0.4)] ${controlPositions[name]}${
-        hide[name] ? " invisible opacity-0" : ""
-      }`}
+      className={`absolute flex h-[5rem] w-[5rem] items-center justify-center rounded-[5rem] bg-[#6edae6] transition-transform duration-300 [box-shadow:0_0.4rem_1.2rem_rgba(0,0,0,0.2)] ${
+        hide[name] ? "cursor-default" : "hover:scale-[1.15]"
+      } ${controlPositions[name]}`}
       onClick={(e) => {
         e.preventDefault();
         move(name);
       }}
       aria-label={label}
     >
-      <Icon className="text-[3rem] text-[#6edae6]" />
+      <Icon className={`text-[3rem] text-white ${hide[name] ? "opacity-40" : ""}`} />
     </a>
   );
 
@@ -51,7 +51,7 @@ const Section4 = () => {
           style={{ marginRight: `${axisX}rem` }}
         >
           {watchBands.map((band) => (
-            <img src={band} className="h-[35rem] w-[35rem] object-contain" key={band} alt="" />
+            <img src={band} className="h-[35rem] w-[35rem] object-contain max-[700px]:h-[24rem] max-[700px]:w-[24rem]" key={band} alt="" />
           ))}
         </div>
         <div
@@ -59,7 +59,7 @@ const Section4 = () => {
           style={{ marginTop: `${axisY}rem` }}
         >
           {watchCases.map((c) => (
-            <img src={c} className="h-[35rem] w-[35rem] object-contain" key={c} alt="" />
+            <img src={c} className="h-[35rem] w-[35rem] object-contain max-[700px]:h-[24rem] max-[700px]:w-[24rem]" key={c} alt="" />
           ))}
         </div>
       </div>

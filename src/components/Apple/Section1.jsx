@@ -35,7 +35,7 @@ const Section1 = () => {
 
   return (
     <section
-      className="relative flex h-screen w-full items-center justify-evenly bg-[#6edae6] [clip-path:polygon(100%_0,100%_95%,38%_100%,0_100%,0_0)]"
+      className="relative flex h-screen w-full items-center justify-evenly bg-[#6edae6] [clip-path:polygon(100%_0,100%_95%,38%_100%,0_100%,0_0)] max-[700px]:flex-col max-[700px]:justify-center max-[700px]:overflow-hidden"
       id="section-1"
     >
       <a
@@ -56,9 +56,9 @@ const Section1 = () => {
           </a>
         ))}
       </nav>
-      <div className="max-[700px]:opacity-70 [perspective:100rem]">
+      <div className="max-[700px]:opacity-70 max-[700px]:mt-[2rem] [perspective:100rem]">
         <div
-          className="relative top-[-2rem] h-[55rem] w-[30rem] transition-transform duration-500 max-[700px]:top-[3rem] [transform-style:preserve-3d]"
+          className="relative top-[-2rem] h-[55rem] w-[30rem] transition-transform duration-500 max-[700px]:top-0 max-[700px]:h-[42rem] max-[700px]:w-[24rem] [transform-style:preserve-3d]"
           style={{ transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg) rotateZ(${rotation.z}deg)` }}
         >
           <div className="absolute h-full w-full bg-[#fee] p-[2.5rem] [box-shadow:inset_0.1rem_0.1rem_0.1rem_#ddd,inset_-0.1rem_-0.1rem_0.1rem_#ddd] [transform:translateZ(5rem)] [transform-style:preserve-3d]">
@@ -101,7 +101,7 @@ const Section1 = () => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col max-[700px]:absolute">
+      <div className="flex flex-col max-[700px]:mt-[5rem] max-[700px]:items-center">
         <h1 className="text-[13rem] font-light uppercase tracking-[0.5rem] max-[1100px]:text-[8rem]">
           <span className="max-[700px]:invisible max-[700px]:opacity-0">&#8592;</span> Best Gift
         </h1>

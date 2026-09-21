@@ -355,6 +355,11 @@ html.apple-root {
     font-size: 40%;
   }
 }
+@media (max-width: 700px) {
+  html.apple-root {
+    font-size: 38%;
+  }
+}
 @media (max-width: 450px) {
   html.apple-root {
     font-size: 35%;
