@@ -6,7 +6,7 @@ const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <header className="relative overflow-hidden border-b border-[#A3E635]/20 bg-[#052E16]">
+    <header className="relative border-b border-[#A3E635]/20 bg-[#052E16]">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url(/home-page-bg.jpeg)" }}

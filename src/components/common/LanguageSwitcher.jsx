@@ -37,7 +37,7 @@ const LanguageSwitcher = () => {
       <button
         type="button"
         onClick={() => setOpen((isOpen) => !isOpen)}
-        className="px-3 py-2 rounded border border-gray-200 text-sm text-gray-700 hover:bg-gray-50"
+        className="px-3 py-2 rounded border border-[#A3E635]/40 bg-[#052E16]/70 text-sm text-[#D9F99D] hover:border-[#A3E635]/70 hover:bg-[#0B3D24] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A3E635]"
         aria-haspopup="listbox"
         aria-expanded={open}
       >
@@ -45,7 +45,7 @@ const LanguageSwitcher = () => {
       </button>
       {open && (
         <ul
-          className="absolute top-full mt-1 start-0 w-full rounded border border-gray-200 bg-white shadow-lg"
+          className="absolute top-full start-0 z-20 mt-1 w-full overflow-hidden rounded-lg border border-[#A3E635]/30 bg-[#052E16] shadow-lg"
           role="listbox"
         >
           {LANGUAGES.map((lng) => (
@@ -53,10 +53,10 @@ const LanguageSwitcher = () => {
               <button
                 type="button"
                 onClick={() => changeLanguage(lng.code)}
-                className={`w-full px-3 py-2 text-start text-sm hover:bg-gray-50 ${
+                className={`w-full px-3 py-2 text-start text-sm hover:bg-[#0B3D24] ${
                   lng.code === activeCode
-                    ? "text-blue-600 font-semibold"
-                    : "text-gray-700"
+                    ? "text-[#A3E635] font-semibold"
+                    : "text-[#D9F99D]"
                 }`}
                 role="option"
                 aria-selected={lng.code === activeCode}

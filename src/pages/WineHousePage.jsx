@@ -42,7 +42,7 @@ const WineHousePage = () => {
   const scale = (index) => (index === active ? 1 : 1.5);
 
   return (
-    <div className="mx-auto w-full px-[15px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]">
+    <div className="relative h-screen w-full overflow-hidden">
       <WineNavbar open={menuOpen} onToggle={() => setMenuOpen((p) => !p)} />
 
       <button
@@ -87,7 +87,7 @@ const WineHousePage = () => {
         </div>
       </div>
 
-      <div className="relative h-screen w-screen overflow-hidden">
+      <div className="absolute inset-0">
         <Section1 left={left(0)} scale={scale(0)} />
         <Section2 left={left(1)} scale={scale(1)} />
         <Section3 left={left(2)} scale={scale(2)} />

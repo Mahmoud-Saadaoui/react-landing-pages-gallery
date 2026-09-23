@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Navbar from "../components/PortfolioRtl/Navbar";
 import Header from "../components/PortfolioRtl/Header";
 import Licence from "../components/PortfolioRtl/Licence";
@@ -7,9 +6,6 @@ import Gallery from "../components/PortfolioRtl/Gallery";
 import Contacts from "../components/PortfolioRtl/Contacts";
 
 export default function PortfolioRtlPage() {
-  useEffect(() => {
-    document.title = "صفحة هبوط شخصية";
-  }, []);
 
   return (
     <div className="portfolio-rtl-page overflow-x-hidden">

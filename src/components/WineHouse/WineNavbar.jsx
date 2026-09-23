@@ -1,12 +1,31 @@
-import logo from "./images/logo.png";
 import { navLinks } from "./data";
 
 const line = "h-[0.3rem] w-full bg-[#d50000] transition-transform duration-500";
 
 const WineNavbar = ({ open, onToggle }) => (
   <div className="fixed top-[1rem] z-[100] flex w-full items-center justify-evenly max-[1000px]:justify-start max-[1000px]:pl-[2rem]">
-    <a href="#" className="logo-link">
-      <img src={logo} alt="Logo" className="h-[6rem]" />
+    <a href="#" className="logo-link flex items-center gap-[1rem]">
+      <span className="flex h-[5.5rem] w-[5.5rem] shrink-0 items-center justify-center rounded-full border-[0.2rem] border-solid border-[#d50000] bg-[#d50000]/15">
+        <svg viewBox="0 0 64 64" className="h-[4rem] w-[4rem]" aria-hidden="true">
+          <path
+            d="M10 10 L26 30 L26 52 L38 52 L38 30 L54 10 Z"
+            fill="none"
+            stroke="#fff"
+            strokeWidth="3"
+            strokeLinejoin="round"
+          />
+          <path d="M18 20 L46 20" stroke="#fff" strokeWidth="3" />
+          <circle cx="30" cy="50" r="3.2" fill="#d50000" />
+          <path d="M26 12 C26 4 38 4 38 12 L38 26 L26 26 Z" fill="#d50000" opacity="0.9" />
+        </svg>
+      </span>
+      <span className="text-[1.8rem] font-bold uppercase leading-[1.1] tracking-[0.15rem] text-[#fff] [text-shadow:0_0.2rem_0.8rem_#000]">
+        Fruity
+        <br />
+        Cocktail
+        <br />
+        House
+      </span>
     </a>
 
     <a

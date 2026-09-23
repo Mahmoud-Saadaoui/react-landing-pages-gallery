@@ -319,9 +319,14 @@ html.classic-cars-root {
   }
 }
 
-/* WineHouse */
+/* WineHouse (Fruity Cocktail House) */
 html.wine-house-root {
   font-size: 62.5%;
+  overflow-x: hidden;
+}
+html.wine-house-root,
+html.wine-house-root body {
+  overflow-x: hidden;
 }
 @media (max-width: 500px) {
   html.wine-house-root {

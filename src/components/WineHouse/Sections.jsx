@@ -4,7 +4,7 @@ import wineBottle from "./images/wine-bottle.webp";
 import frame from "./images/frame.webp";
 import grapes from "./images/grapes.webp";
 import newWines from "./images/section-4-bg.jpg";
-import footerImg from "./images/footer-img.png";
+import footerImg from "./images/footer-img.webp";
 import section1Bg from "./images/section-1-bg.jpg";
 import section2Bg from "./images/section-2-bg.jpg";
 import section3Bg from "./images/section-3-bg.jpg";
@@ -24,8 +24,8 @@ export const Section1 = ({ left, scale }) => (
       }}
     >
       <div className="absolute top-[70%] left-1/2 -translate-x-1/2 -translate-y-1/2 max-[1200px]:w-[80%]">
-        <h1 className="border-b-[0.2rem] border-solid border-[#d50000] text-right text-[10rem] font-light capitalize tracking-[0.1rem] text-[#fff] select-none max-[1200px]:text-[8rem] max-[800px]:text-[6rem] max-[600px]:text-[4rem]">
-          The best wines around the world
+        <h1 className="border-b-[0.2rem] border-solid border-[#d50000] text-right text-[9rem] font-light capitalize tracking-[0.1rem] text-[#fff] select-none max-[1200px]:text-[7rem] max-[800px]:text-[5rem] max-[600px]:text-[3.6rem]">
+          Fresh fruit cocktails every day
         </h1>
       </div>
     </div>
@@ -44,7 +44,7 @@ export const Section2 = ({ left, scale }) => (
       <div className="flex flex-col items-center justify-center max-[1000px]:order-1">
         <img
           src={bag}
-          alt="Sale Bag"
+          alt="Takeaway Tote Bag"
           loading="lazy"
           className="w-[45rem] opacity-[0.9] max-[1600px]:w-[35rem] max-[1300px]:w-[30rem] max-[1200px]:w-[25rem] max-[800px]:w-[20rem] max-[600px]:w-[15rem]"
         />
@@ -55,11 +55,11 @@ export const Section2 = ({ left, scale }) => (
           order now!
         </button>
       </div>
-      <img
+<img
         src={wineBottle}
-        alt="Wine Bottle"
+        alt="Fruit Cocktail Glass"
         loading="lazy"
-        className="w-[80rem] opacity-60 max-[1600px]:w-[65rem] max-[1300px]:w-[60rem] max-[1200px]:w-[50rem] max-[800px]:w-[40rem] max-[600px]:w-[30rem]"
+        className="w-[50rem] opacity-60 max-[1600px]:w-[42rem] max-[1300px]:w-[38rem] max-[1200px]:w-[32rem] max-[800px]:w-[28rem] max-[600px]:w-[22rem]"
       />
     </div>
   </section>
@@ -90,11 +90,11 @@ export const Section3 = ({ left, scale }) => {
         />
         <img
           src={grapes}
-          alt="Grapes"
+          alt="Fresh Fruit Slices"
           loading="lazy"
           onMouseOver={() => setDimmed(true)}
           onMouseOut={() => setDimmed(false)}
-          className="absolute w-[40rem] opacity-70 transition-all duration-[1.5s] hover:scale-[2] hover:opacity-100 max-[1000px]:w-[25rem] max-[500px]:w-[15rem] max-[500px]:hover:w-[25rem]"
+          className="absolute w-[35rem] opacity-70 transition-all duration-[1.5s] hover:scale-[2] hover:opacity-100 max-[1000px]:w-[22rem] max-[500px]:w-[14rem] max-[500px]:hover:w-[22rem]"
         />
       </div>
     </section>
@@ -109,11 +109,11 @@ export const Section4 = ({ left, scale }) => (
         style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url(${newWines})` }}
       />
       <h1 className="mb-[7rem] text-center text-[10rem] font-light text-[#d50000] select-none max-[1000px]:text-[8rem] max-[600px]:text-[6rem]">
-        Newly Released Wines
+        New Fruity Cocktails
       </h1>
       <img
         src={newWines}
-        alt="New Wines"
+        alt="New Fruity Cocktails"
         loading="lazy"
         className="w-[70rem] border-[0.1rem] border-solid border-[#fff] p-[1rem] opacity-70 max-[1000px]:w-[60rem] max-[800px]:w-[45rem] max-[600px]:w-[35rem]"
       />

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Header from "../components/Product/Header";
 import Features from "../components/Product/Features";
 import Prices from "../components/Product/Prices";
@@ -8,9 +7,6 @@ import Contact from "../components/Product/Contact";
 import Footer from "../components/Product/Footer";
 
 export default function ProductPage() {
-  useEffect(() => {
-    document.title = "صفحة هبوط لمنتج";
-  }, []);
 
   return (
     <div className="product-page overflow-x-hidden">

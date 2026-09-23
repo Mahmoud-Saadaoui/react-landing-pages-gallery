@@ -54,7 +54,7 @@ const landingPages = [
   { slug: "classic-cars", title: "Classic Cars", category: "creative", screenshot: "/screenshots/Classic-Cars.webp", status: "done", scope: "ClassicCars", component: ClassicCarsPage },
   { slug: "classic-website", title: "Classic Website", category: "creative", screenshot: "/screenshots/Classic-Website.webp", status: "done", scope: "Classic", component: ClassicPage },
   { slug: "special-design", title: "Special Design", category: "creative", screenshot: "/screenshots/Special-Design.webp", status: "done", scope: "SpecialDesign", component: SpecialDesignPage },
-  { slug: "final-files", title: "Final Files", category: "creative", status: "done", scope: "WineHouse", component: WineHousePage },
+  { slug: "fruity-cocktail-house", title: "Fruity Cocktail House", category: "creative", screenshot: "/screenshots/Fruity-Cocktail-House.webp", status: "done", scope: "WineHouse", component: WineHousePage },
   { slug: "plans", title: "Plans", category: "creative", screenshot: "/screenshots/Plans.webp", status: "done", scope: "Plans", component: PlansPage },
   { slug: "coming-soon", title: "Coming Soon", category: "creative", screenshot: "/screenshots/coming-soon.webp", rtl: true, lang: "ar", status: "done", scope: "ComingSoon", component: ComingSoonPage },
   { slug: "testimonial-grid", title: "Testimonial Grid", category: "creative", screenshot: "/screenshots/Testimonial-Grid.webp", status: "done", scope: "TestimonialGrid", component: TestimonialGridPage },

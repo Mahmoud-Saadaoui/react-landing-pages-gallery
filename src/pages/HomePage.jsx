@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import landingPages, { CATEGORIES } from "../config/landingPages";
 
+const PAGE_SIZE = 6;
+
 const initial = (title) => title.trim().charAt(0).toUpperCase();
 
 const CardImage = ({ page }) => {
@@ -74,13 +76,103 @@ const chipBase = (selected) =>
       : "border-[#A3E635]/30 bg-[#052E16]/60 text-[#D9F99D] hover:border-[#A3E635]/70 hover:bg-[#0B3D24]"
   }`;
 
+const FilterChips = ({ active, onSelect }) => {
+  const { t } = useTranslation();
+
+  return (
+    <div
+      className="flex flex-wrap justify-center gap-2"
+      role="group"
+      aria-label={t("gallery.all")}
+    >
+      <button
+        type="button"
+        onClick={() => onSelect(null)}
+        className={chipBase(active === null)}
+      >
+        {t("gallery.all")}
+      </button>
+      {CATEGORIES.map((category) => (
+        <button
+          key={category}
+          type="button"
+          onClick={() => onSelect(category)}
+          className={chipBase(active === category)}
+        >
+          {t(`categories.${category}`)}
+        </button>
+      ))}
+    </div>
+  );
+};
+
+const Pagination = ({ current, total, onChange }) => {
+  if (total <= 1) return null;
+
+  const idle =
+    "rounded-lg border border-[#A3E635]/30 px-3.5 py-2 text-sm font-medium text-[#D9F99D] transition-colors hover:border-[#A3E635]/70 hover:bg-[#0B3D24] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:border-[#A3E635]/30 disabled:hover:bg-transparent";
+  const active =
+    "rounded-lg border border-[#A3E635] bg-[#A3E635] px-3.5 py-2 text-sm font-medium text-[#052E16]";
+
+  return (
+    <nav
+      className="mt-10 flex flex-wrap items-center justify-center gap-2"
+      aria-label="Pagination"
+    >
+      <button
+        type="button"
+        onClick={() => onChange(current - 1)}
+        disabled={current === 1}
+        className={idle}
+      >
+        &lsaquo; Prev
+      </button>
+      {Array.from({ length: total }, (_, i) => i + 1).map((page) => (
+        <button
+          key={page}
+          type="button"
+          onClick={() => onChange(page)}
+          aria-current={page === current ? "page" : undefined}
+          className={page === current ? active : idle}
+        >
+          {page}
+        </button>
+      ))}
+      <button
+        type="button"
+        onClick={() => onChange(current + 1)}
+        disabled={current === total}
+        className={idle}
+      >
+        Next &rsaquo;
+      </button>
+    </nav>
+  );
+};
+
 const HomePage = () => {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filtered = activeCategory
     ? landingPages.filter((p) => p.category === activeCategory)
     : landingPages;
+
+  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const safePage = Math.min(currentPage, pageCount);
+  const visiblePages = filtered.slice(
+    (safePage - 1) * PAGE_SIZE,
+    safePage * PAGE_SIZE
+  );
+
+  const selectCategory = (category) => {
+    setActiveCategory(category);
+    setCurrentPage(1);
+    document
+      .getElementById("gallery-grid")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   const words = t("gallery.title").split(" ");
 
@@ -104,14 +196,14 @@ const HomePage = () => {
         }
       `}</style>
 
-      <div className="relative flex min-h-[78vh] items-center justify-center overflow-hidden bg-[#081B08]">
+      <div className="relative flex min-h-[78vh] flex-col items-center justify-center overflow-hidden bg-[#081B08]">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url(/home-page-bg.jpeg)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#081B08]/80 via-[#081B08]/55 to-[#052E16]/95" />
 
-        <div className="relative z-10 max-w-4xl px-6 py-28 text-center">
+        <div className="relative z-10 flex max-w-4xl flex-col items-center gap-10 px-6 py-24 text-center">
           <h1 className="font-display text-4xl font-bold leading-tight text-[#DCFCE7] sm:text-5xl md:text-6xl">
             {words.map((word, i) => (
               <span
@@ -124,6 +216,10 @@ const HomePage = () => {
               </span>
             ))}
           </h1>
+
+          <div className="home-fade" style={{ animationDelay: "1.4s" }}>
+            <FilterChips active={activeCategory} onSelect={selectCategory} />
+          </div>
         </div>
 
         <div
@@ -138,40 +234,18 @@ const HomePage = () => {
       </div>
 
       <div className="bg-[#052E16]">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-          <div
-            className="mb-8 flex flex-wrap gap-2"
-            role="group"
-            aria-label={t("gallery.all")}
-          >
-            <button
-              type="button"
-              onClick={() => setActiveCategory(null)}
-              className={chipBase(activeCategory === null)}
-            >
-              {t("gallery.all")}
-            </button>
-            {CATEGORIES.map((category) => (
-              <button
-                key={category}
-                type="button"
-                onClick={() =>
-                  setActiveCategory((current) =>
-                    current === category ? null : category
-                  )
-                }
-                className={chipBase(activeCategory === category)}
-              >
-                {t(`categories.${category}`)}
-              </button>
-            ))}
-          </div>
-
+        <div id="gallery-grid" className="mx-auto max-w-6xl scroll-mt-6 px-4 py-12 sm:py-16">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {filtered.map((page) => (
+            {visiblePages.map((page) => (
               <Card key={page.slug} page={page} />
             ))}
           </div>
+
+          <Pagination
+            current={safePage}
+            total={pageCount}
+            onChange={setCurrentPage}
+          />
         </div>
       </div>
     </section>
