@@ -41,8 +41,10 @@ export const Header = () => {
           </a>
         </div>
         <ul
-          className={`flex list-none items-center gap-8 max-[600px]:absolute max-[600px]:top-[68px] max-[600px]:left-0 max-[600px]:w-full max-[600px]:origin-top max-[600px]:flex-col max-[600px]:bg-black/90 max-[600px]:p-8 max-[600px]:transition-transform max-[600px]:duration-500 max-[600px]:scale-y-0${
-            open ? " max-[600px]:scale-y-100" : ""
+          className={`flex list-none items-center gap-8 max-[600px]:absolute max-[600px]:top-16 max-[600px]:left-0 max-[600px]:w-full max-[600px]:origin-top max-[600px]:flex-col max-[600px]:bg-black/90 max-[600px]:p-8 max-[600px]:transition-[opacity,transform,visibility] max-[600px]:duration-300 ${
+            open
+              ? "max-[600px]:visible max-[600px]:translate-y-0 max-[600px]:opacity-100 max-[600px]:pointer-events-auto"
+              : "max-[600px]:invisible max-[600px]:-translate-y-2 max-[600px]:opacity-0 max-[600px]:pointer-events-none"
           }`}
           id="nav-links"
         >
@@ -51,18 +53,24 @@ export const Header = () => {
               <a
                 href={`#${link.id}`}
                 onClick={close}
-                className={`relative py-[10px] text-white transition duration-300 after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:bg-white after:transition-[width] after:duration-300 hover:after:w-full max-[600px]:opacity-0${
-                  open ? " max-[600px]:opacity-100" : ""
-                }`}
+                className="relative py-[10px] text-white transition duration-300 after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:bg-white after:transition-[width] after:duration-300 hover:after:w-full"
               >
                 {link.label}
               </a>
             </li>
           ))}
         </ul>
-        <div className="hidden text-2xl text-white max-[600px]:block" id="menu-btn" onClick={toggle}>
-          <span>{MENU_ICONS[open ? "open" : "closed"]}</span>
-        </div>
+        <button
+          type="button"
+          className="hidden text-2xl text-white max-[600px]:block"
+          id="menu-btn"
+          onClick={toggle}
+          aria-controls="nav-links"
+          aria-expanded={open}
+          aria-label={open ? "Close menu" : "Open menu"}
+        >
+          {MENU_ICONS[open ? "open" : "closed"]}
+        </button>
         <div className="flex flex-1 items-center justify-end gap-8 max-[900px]:hidden">
           <span className="cursor-pointer text-[1.2rem] text-white">
             <RiSearchFill />

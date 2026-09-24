@@ -245,6 +245,15 @@ textarea {
   transform: translateY(0);
 }
 
+/* Keep testimonial controls clear of the author details. */
+.furniture-testimonials-swiper {
+  padding-bottom: 4rem !important;
+}
+
+.furniture-testimonials-swiper .swiper-pagination {
+  bottom: 1rem !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .landing-scope [data-reveal] {
     opacity: 1;
